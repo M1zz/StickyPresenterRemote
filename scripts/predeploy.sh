@@ -6,8 +6,8 @@
 # — 개발 중 `xcodebuild test -scheme StickyPresenterRemote -destination 'platform=iOS Simulator,…'`. 배포는 Release 로 나가고, #if DEBUG 안에만 있는
 # 코드를 밖에서 부르면 Debug 만 통과하고 Release 에서 깨진다. 서명은 끈다 — 서명은 DeployBar 의 아카이브가 한다.
 #
-# 리모컨은 ../Shared/RemoteProtocol.swift 를 Mac 앱과 같이 쓴다. 한쪽만 고쳐 프로토콜이 어긋나면
-# 컴파일은 되어도 짝이 안 맞으므로, 두 앱을 같은 날 함께 출시한다.
+# Sources/RemoteProtocol.swift 는 Mac 앱 레포(StickyPresenter)의 Shared/RemoteProtocol.swift 와 같아야 한다.
+# 한쪽만 고쳐 프로토콜이 어긋나면 컴파일은 되어도 짝이 안 맞으므로, 두 앱을 같은 날 함께 출시한다.
 
 set -euo pipefail
 cd "$(dirname "$0")/.."

@@ -1,6 +1,6 @@
 import XCTest
 
-/// Mac 앱과 리모컨이 **같은 파일**(Shared/RemoteProtocol.swift)로 주고받는 규약.
+/// Mac 앱과 리모컨이 **같은 내용의 파일**(RemoteProtocol.swift, 두 레포에 하나씩)로 주고받는 규약.
 /// 한쪽만 고쳐 디코딩이 조용히 깨지는 일을 여기서 먼저 잡는다.
 final class RemoteProtocolTests: XCTestCase {
 

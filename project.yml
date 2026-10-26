@@ -25,9 +25,6 @@ targets:
     platform: iOS
     sources:
       - path: Sources
-      # Mac 앱과 **같은 파일**을 참조한다. 복사본을 두면 한쪽만 고쳤을 때
-      # 디코딩이 조용히 깨지므로 반드시 원본을 공유할 것.
-      - path: ../Shared/RemoteProtocol.swift
     dependencies:
       - package: LeeoKit
     # 피드백 · 통계 · 킬스위치가 쓰는 FeedbackHub CloudKit 컨테이너 (Mac 앱과 같은 컨테이너).
@@ -85,7 +82,7 @@ targets:
     sources:
       - path: Tests
       - path: Sources/PendingCommands.swift
-      - path: ../Shared/RemoteProtocol.swift
+      - path: Sources/RemoteProtocol.swift
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.leeo.StickyPresenter.RemoteTests

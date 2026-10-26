@@ -7,10 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06C96CF0E19E8D7948C0FA28 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE070E32987838405727BC /* RemoteProtocol.swift */; };
 		0E0DBEAD47CAA750BA1AD617 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = CD3A8DBED7284C9A8C1CE062 /* Localizable.strings */; };
 		157CABBB6EFBC831B38787C6 /* RemoteOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD392207E8145849F24F519 /* RemoteOnboardingView.swift */; };
-		167330F4F02C476E45C13C54 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9EE070E32987838405727BC /* RemoteProtocol.swift */; };
 		27F55089A8A708CBA472AF91 /* RemoteTips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E7ECD9C09AE74D3B9F6721 /* RemoteTips.swift */; };
 		2AC4034403D1D897AF5D9D40 /* PendingCommandQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A6DF30F5B36060C062DC30 /* PendingCommandQueueTests.swift */; };
 		36889C9985D1426304587366 /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 871AEE3EB6825D8365096919 /* LeeoKit */; };
@@ -19,10 +17,12 @@
 		7BA01B7E3EC264C43A1D214F /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E63ACA9C91C08DE2F60D7A /* RemoteClient.swift */; };
 		7BD3A7E9B710AA02E9069D4D /* RemoteProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71164E2E48251299244D654E /* RemoteProtocolTests.swift */; };
 		8A75839F453BCEC9CCF6C3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33A3FC5F8ED9CE541B90283 /* Assets.xcassets */; };
+		93BD4E05FE9DEF02262F5731 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */; };
 		9FE09D2C06B3B8BE7114CF28 /* RemoteSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADBE7A2F16B664DAEDA3C87 /* RemoteSpec.swift */; };
 		A2A056540578E7F6380CAC40 /* RemoteSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D95BE6593C8EFC65AD672D5C /* RemoteSettingsView.swift */; };
 		B276F01F8BABB8849CF69171 /* AppShortcuts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4953DD735451EB602F8C7C16 /* AppShortcuts.strings */; };
 		C37109C733169D440EDEE771 /* PendingCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B405F348627AA4B63F0643EA /* PendingCommands.swift */; };
+		C3DEB0D404BC1A4143F7C058 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */; };
 		D297397E61389B9B22B9BAB7 /* PendingCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B405F348627AA4B63F0643EA /* PendingCommands.swift */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +45,7 @@
 		3D19D59C970AC2AA3BDB7407 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		3DC7F5081638038C1C9C3C8F /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		452EA1882F50C995A7F0A61B /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
+		4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProtocol.swift; sourceTree = "<group>"; };
 		4CD47D3EE527898BC2AB8BB9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		51EFA8411F3D147744EF1648 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		529FF05508991CD248702B2B /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
@@ -77,7 +78,6 @@
 		B076C7C6ECFF8476ADA8BF29 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		B405F348627AA4B63F0643EA /* PendingCommands.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PendingCommands.swift; sourceTree = "<group>"; };
 		B46BC32350CF8FC989D82B2F /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-GB"; path = "en-GB.lproj/AppShortcuts.strings"; sourceTree = "<group>"; };
-		B9EE070E32987838405727BC /* RemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProtocol.swift; sourceTree = "<group>"; };
 		BA769C01C2EDE501C818FEEC /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		BE6BF1EAEBFE71C5941436C3 /* pt-BR */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "pt-BR"; path = "pt-BR.lproj/AppShortcuts.strings"; sourceTree = "<group>"; };
 		C0BA1A9C7314F7C041B846CE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppShortcuts.strings"; sourceTree = "<group>"; };
@@ -117,6 +117,7 @@
 				AFCF09A7AEFAD8E25CE0980C /* RemoteApp.swift */,
 				80E63ACA9C91C08DE2F60D7A /* RemoteClient.swift */,
 				DFD392207E8145849F24F519 /* RemoteOnboardingView.swift */,
+				4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */,
 				D95BE6593C8EFC65AD672D5C /* RemoteSettingsView.swift */,
 				07EC8BC453356805648721C7 /* RemoteShortcuts.swift */,
 				AADBE7A2F16B664DAEDA3C87 /* RemoteSpec.swift */,
@@ -135,14 +136,6 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		781585382D6576CC2DCDC67C /* Shared */ = {
-			isa = PBXGroup;
-			children = (
-				B9EE070E32987838405727BC /* RemoteProtocol.swift */,
-			);
-			path = Shared;
-			sourceTree = "<group>";
-		};
 		9436FDA3E4266209C6DBE6B2 /* Config */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,7 +149,6 @@
 			children = (
 				9436FDA3E4266209C6DBE6B2 /* Config */,
 				16C08B0AB27E62581F7DD00B /* Sources */,
-				DCA31628B631421C3529F489 /* StickyPresenter */,
 				CCBF5A16044557C2D36FF5F8 /* Tests */,
 				1A1025612DE1AFDEA5E32B06 /* Products */,
 			);
@@ -169,15 +161,6 @@
 				71164E2E48251299244D654E /* RemoteProtocolTests.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		DCA31628B631421C3529F489 /* StickyPresenter */ = {
-			isa = PBXGroup;
-			children = (
-				781585382D6576CC2DCDC67C /* Shared */,
-			);
-			name = StickyPresenter;
-			path = ..;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,7 +290,7 @@
 				506154922BACDBC8228173B5 /* RemoteApp.swift in Sources */,
 				7BA01B7E3EC264C43A1D214F /* RemoteClient.swift in Sources */,
 				157CABBB6EFBC831B38787C6 /* RemoteOnboardingView.swift in Sources */,
-				06C96CF0E19E8D7948C0FA28 /* RemoteProtocol.swift in Sources */,
+				C3DEB0D404BC1A4143F7C058 /* RemoteProtocol.swift in Sources */,
 				A2A056540578E7F6380CAC40 /* RemoteSettingsView.swift in Sources */,
 				42A175D7F46F1A95CFD69653 /* RemoteShortcuts.swift in Sources */,
 				9FE09D2C06B3B8BE7114CF28 /* RemoteSpec.swift in Sources */,
@@ -321,7 +304,7 @@
 			files = (
 				2AC4034403D1D897AF5D9D40 /* PendingCommandQueueTests.swift in Sources */,
 				D297397E61389B9B22B9BAB7 /* PendingCommands.swift in Sources */,
-				167330F4F02C476E45C13C54 /* RemoteProtocol.swift in Sources */,
+				93BD4E05FE9DEF02262F5731 /* RemoteProtocol.swift in Sources */,
 				7BD3A7E9B710AA02E9069D4D /* RemoteProtocolTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
