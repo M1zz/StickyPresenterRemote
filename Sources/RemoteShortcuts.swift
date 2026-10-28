@@ -41,7 +41,6 @@ struct RemoteShortcuts: AppShortcutsProvider {
             intent: StartMacTimerIntent(),
             phrases: [
                 "Start a timer with \(.applicationName)",
-                "Start a Mac timer with \(.applicationName)",
             ],
             shortTitle: "Mac 타이머",
             systemImageName: "timer"
