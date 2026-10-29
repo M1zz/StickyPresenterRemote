@@ -4,6 +4,152 @@ DeployBar 가 배포할 때 이 파일의 `## <버전>` ▸ `### 앱스토어 (.
 리모컨 앱의 '이 버전의 새로운 기능' 칸에 그대로 올린다.
 Mac 앱 노트는 레포 최상단 `RELEASE_NOTES.md` 에 따로 있다.
 
+## 1.0.12
+
+### 앱스토어 (한국어)
+
+의견 보내기 화면을 VoiceOver로 쓰기 쉬워졌어요
+아주 큰 글씨에서도 화면이 잘 보여요
+앱을 금방 닫았다 열어도 평소대로 켜져요
+
+### App Store (en-US)
+
+Feedback screen now works with VoiceOver
+Looks right even with extra-large text
+Opens normally even after a quick close
+
+### App Store (en-GB)
+
+Feedback screen now works with VoiceOver
+Looks right even with extra-large text
+Opens normally even after a quick close
+
+### 앱스토어 (일본어)
+
+VoiceOverでご意見の画面が使いやすくなりました
+文字をとても大きくしても見やすく表示されます
+すぐに閉じて開き直しても、いつも通り起動します
+
+### 앱스토어 (zh-Hans)
+
+用 VoiceOver 发送反馈更方便了
+使用超大字体时画面也清晰好看
+刚关闭就重新打开，也能正常启动
+
+### 앱스토어 (스페인어)
+
+Más fácil opinar con VoiceOver
+Se ve bien incluso con letra muy grande
+Abre bien aunque la cierres enseguida
+
+### 앱스토어 (독일어)
+
+Feedback mit VoiceOver ist einfacher
+Auch mit sehr großer Schrift gut lesbar
+Startet normal, auch nach kurzem Beenden
+
+### 앱스토어 (프랑스어)
+
+Retours plus simples avec VoiceOver
+Bien lisible même en très grand texte
+S’ouvre bien même fermée aussitôt
+
+### 앱스토어 (이탈리아어)
+
+Feedback più facile con VoiceOver
+Leggibile anche con testo molto grande
+Si apre bene anche se chiusa subito
+
+### 앱스토어 (pt-BR)
+
+Feedback mais fácil com o VoiceOver
+Fica bem até com letra muito grande
+Abre normal mesmo após fechar rápido
+
+### 앱스토어 (러시아어)
+
+Отзыв проще отправить с VoiceOver
+Удобно даже с очень крупным шрифтом
+Стабильно открывается после закрытия
+
+### 앱스토어 (zh-Hant)
+
+用 VoiceOver 傳送意見更方便了
+使用超大字體時畫面也清楚好看
+剛關閉又重新開啟，也能正常啟動
+
+### 앱스토어 (태국어)
+
+ส่งความคิดเห็นด้วย VoiceOver ได้ง่ายขึ้น
+ใช้ตัวอักษรขนาดใหญ่มากก็ยังอ่านง่าย
+ปิดแล้วเปิดใหม่ทันทีก็ยังเปิดได้ตามปกติ
+
+### 앱스토어 (베트남어)
+
+Gửi góp ý dễ hơn với VoiceOver
+Vẫn dễ đọc khi dùng chữ rất lớn
+Mở bình thường kể cả khi vừa đóng
+
+### 앱스토어 (체코어)
+
+Zpětná vazba je s VoiceOverem snazší
+Dobře čitelné i s velmi velkým písmem
+Spustí se normálně i po rychlém zavření
+
+### 앱스토어 (덴마크어)
+
+Nemmere at give feedback med VoiceOver
+Ser godt ud selv med meget stor tekst
+Åbner normalt, også efter hurtig lukning
+
+### 앱스토어 (그리스어)
+
+Πιο εύκολα σχόλια με το VoiceOver
+Καθαρό ακόμη και με πολύ μεγάλο κείμενο
+Ανοίγει κανονικά μετά από κλείσιμο
+
+### 앱스토어 (핀란드어)
+
+Palaute sujuu helpommin VoiceOverilla
+Toimii myös erittäin isolla tekstillä
+Käynnistyy normaalisti pikasulun jälkeen
+
+### 앱스토어 (인도네시아어)
+
+Kirim masukan kini mudah via VoiceOver
+Tetap rapi dengan teks sangat besar
+Tetap terbuka normal meski baru ditutup
+
+### 앱스토어 (노르웨이어(보크말))
+
+Tilbakemelding er enklere med VoiceOver
+Ser bra ut også med svært stor tekst
+Åpner som vanlig selv etter rask lukking
+
+### 앱스토어 (네덜란드어)
+
+Makkelijker feedback met VoiceOver
+Ook met heel grote tekst goed leesbaar
+Opent normaal, ook na snel afsluiten
+
+### 앱스토어 (폴란드어)
+
+Łatwiejsze wysyłanie opinii z VoiceOver
+Czytelne nawet przy bardzo dużym tekście
+Uruchamia się normalnie po zamknięciu
+
+### 앱스토어 (스웨덴어)
+
+Enklare att ge feedback med VoiceOver
+Ser bra ut även med mycket stor text
+Startar som vanligt efter snabbstängning
+
+### 앱스토어 (튀르키예어)
+
+VoiceOver ile geri bildirim daha kolay
+Çok büyük yazıda bile rahat okunur
+Hemen kapatılsa da normal açılır
+
 ## 1.0.11
 
 ### 앱스토어 (한국어)
