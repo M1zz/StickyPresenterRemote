@@ -54,7 +54,12 @@ struct StickyPresenterRemoteApp: App {
                         hasSeenOnboarding = true
                         client.start()
                     }
+                    // 펼친 아이폰 듀오에서는 아래 판에만 선다. 접혀 있으면 그대로.
+                    .foldConfined()
                 }
+                // 아이폰 듀오: 접힘을 재서 아래로 흘린다. 시트 · 알림창도 접힌 선을 비킨다.
+                // 첫 실행 안내(fullScreenCover)까지 접힘을 받도록 맨 바깥에 건다.
+                .foldAware()
         }
     }
 }
@@ -66,10 +71,17 @@ struct RemoteRootView: View {
     @ObservedObject private var inbox = RemoteIntentInbox.shared
     @AppStorage(RemoteOnboardingView.seenKey) private var hasSeenOnboarding = false
     @State private var showSettings = false
+    @Environment(\.foldLayout) private var fold
 
     var body: some View {
         NavigationStack {
-            content
+            // 아이폰 듀오를 펴면(이 앱은 세로 고정) 아래 판은 리모컨 손잡이, 위 판은 Mac 에서 도는 타이머 현황.
+            // 접혀 있거나 보통 아이폰이면 아래 판만, 곧 지금 화면 그대로다.
+            FoldSplitView {
+                content
+            } result: {
+                RemoteStatusPane()
+            }
                 .navigationTitle("Remote Controller")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
@@ -134,7 +146,11 @@ struct RemoteRootView: View {
             List {
                 ForEach(client.timers) { timer in
                     // 위치 판 팁은 첫 타이머에만 — 같은 풍선이 줄마다 뜨지 않게.
-                    Section { TimerRemoteRow(timer: timer, showsMoveTip: timer.id == client.timers.first?.id) }
+                    Section {
+                        TimerRemoteRow(timer: timer,
+                                       role: fold.isUnfolded ? .controls : .full,
+                                       showsMoveTip: timer.id == client.timers.first?.id)
+                    }
                 }
                 Section("새 타이머") {
                     PresetRow()
@@ -186,6 +202,40 @@ struct RemoteRootView: View {
         // 점의 색만으로는 VoiceOver 가 상태를 읽지 못한다.
         .accessibilityElement(children: .ignore)
         .accessibilityLabel(name.map { String(localized: "\($0)에 연결됨") } ?? String(localized: "연결 안 됨"))
+    }
+}
+
+// MARK: - 아이폰 듀오 위 판
+
+/// 펼친 아이폰 듀오의 위 판(결과 쪽). Mac 에서 지금 무엇이 어떻게 떠 있나.
+/// 접혀 있으면 서지 않는다. 남은 시간과 위치판은 아래 판 줄에서 빠지고 여기로 온다.
+struct RemoteStatusPane: View {
+    @EnvironmentObject private var client: RemoteClient
+
+    var body: some View {
+        Group {
+            if !client.isConnected {
+                ContentUnavailableView("연결 안 됨", systemImage: "desktopcomputer")
+            } else if client.timers.isEmpty {
+                ContentUnavailableView("실행 중인 타이머 없음", systemImage: "timer")
+            } else {
+                ScrollView {
+                    VStack(spacing: 12) {
+                        ForEach(client.timers) { timer in
+                            TimerRemoteRow(timer: timer, role: .status,
+                                           showsMoveTip: timer.id == client.timers.first?.id)
+                                .padding(.horizontal, 16)
+                                .padding(.vertical, 8)
+                                .background(Color(.secondarySystemGroupedBackground),
+                                            in: RoundedRectangle(cornerRadius: 16))
+                        }
+                    }
+                    .padding(16)
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color(.systemGroupedBackground))
     }
 }
 
@@ -576,7 +626,8 @@ struct PairingSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("취소") { dismiss() }
+                    // 세로로 서는 툴바(아이폰 듀오)에서는 아이콘 없는 아이템이 사라진다.
+                    Button { dismiss() } label: { Label("취소", systemImage: "xmark") }
                 }
             }
         }
@@ -638,18 +689,31 @@ struct PresetRow: View {
 // MARK: - Timer Row
 
 struct TimerRemoteRow: View {
+    /// 한 줄에 무엇을 담나. 아이폰 듀오를 펴면 한 타이머가 접힌 선 양쪽에 나뉘어 선다.
+    enum Role {
+        /// 접혀 있거나 보통 아이폰: 전부.
+        case full
+        /// 펼친 아래 판(고르는 쪽): 누르는 것만.
+        case controls
+        /// 펼친 위 판(결과 쪽): 남은 시간과 Mac 화면 위치. 위치판은 크게.
+        case status
+    }
+
     @EnvironmentObject private var client: RemoteClient
     let timer: RemoteTimer
+    var role: Role = .full
     var showsMoveTip = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             header
-            timeAndProgress
-            transport
-            sizePicker
-            positionPad
-            secondaryActions
+            if role != .controls { timeAndProgress }
+            if role != .status {
+                transport
+                sizePicker
+            }
+            if role != .controls { positionPad }
+            if role != .status { secondaryActions }
         }
         .padding(.vertical, 6)
     }
@@ -786,7 +850,8 @@ struct TimerRemoteRow: View {
     private var positionPad: some View {
         let pad = WidgetPositionPad(desktop: client.desktop,
                                     placement: timer.placement,
-                                    isHidden: timer.isHidden) { x, y in
+                                    isHidden: timer.isHidden,
+                                    maxHeight: role == .status ? 220 : 150) { x, y in
             client.send(.moveWidget(timer.id, x: x, y: y))
             MoveWidgetTip.hasMovedWidget = true
         }
@@ -858,6 +923,7 @@ struct WidgetPositionPad: View {
     let desktop: RemoteDesktop?
     let placement: RemotePlacement?
     let isHidden: Bool
+    var maxHeight: CGFloat = 150
     let onMove: (Double, Double) -> Void
 
     /// 드래그하는 동안에는 손가락을 따라가는 이 값이 판을 그린다.
@@ -904,7 +970,7 @@ struct WidgetPositionPad: View {
             .accessibilityAction(named: Text("오른쪽 아래로 옮기기")) { moveInCurrentScreen(1.0, 1.0) }
             // 실제 배치 비율 그대로 — 판의 구석이 데스크탑의 구석과 같은 자리를 뜻해야 한다.
             .aspectRatio(CGFloat(desktop?.aspect ?? 16.0 / 10.0), contentMode: .fit)
-            .frame(maxWidth: .infinity, maxHeight: 150)
+            .frame(maxWidth: .infinity, maxHeight: maxHeight)
         }
         .onChange(of: placementPoint) { _, incoming in
             guard !isDragging, let pending, let incoming else { return }

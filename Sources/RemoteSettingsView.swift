@@ -57,7 +57,7 @@ struct RemoteSettingsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("완료") { dismiss() }
+                    Button { dismiss() } label: { Label("완료", systemImage: "checkmark") }
                 }
             }
         }
