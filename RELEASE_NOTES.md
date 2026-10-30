@@ -4,6 +4,128 @@ DeployBar 가 배포할 때 이 파일의 `## <버전>` ▸ `### 앱스토어 (.
 리모컨 앱의 '이 버전의 새로운 기능' 칸에 그대로 올린다.
 Mac 앱 노트는 레포 최상단 `RELEASE_NOTES.md` 에 따로 있다.
 
+## 1.0.13
+
+### 앱스토어 (한국어)
+
+고마울 때 개발자에게 작은 팁을 보낼 수 있어요
+설정의 의견 보내기 아래에 있어요
+
+### App Store (en-US)
+
+You can now tip the developer
+Find it under Feedback in Settings
+
+### App Store (en-GB)
+
+You can now tip the developer
+Find it under Feedback in Settings
+
+### 앱스토어 (일본어)
+
+開発者に小さなチップを送れるようになりました
+設定の「ご意見」の下にあります
+
+### 앱스토어 (zh-Hans)
+
+现在可以给开发者送一点小费了
+在设置的反馈下方
+
+### 앱스토어 (스페인어)
+
+Ya puedes dar propina al desarrollador
+Está en Ajustes, bajo Opiniones
+
+### 앱스토어 (독일어)
+
+Du kannst dem Entwickler Trinkgeld geben
+In den Einstellungen bei Feedback
+
+### 앱스토어 (프랑스어)
+
+Laissez un pourboire au développeur
+Dans Réglages, sous Retours
+
+### 앱스토어 (이탈리아어)
+
+Ora puoi lasciare una mancia
+In Impostazioni, sotto Feedback
+
+### 앱스토어 (pt-BR)
+
+Agora dá para dar gorjeta ao criador
+Fica em Ajustes, abaixo de Feedback
+
+### 앱스토어 (러시아어)
+
+Теперь можно оставить чаевые
+Это в настройках, под отзывами
+
+### 앱스토어 (zh-Hant)
+
+現在可以給開發者一點小費了
+在設定的意見回饋下方
+
+### 앱스토어 (태국어)
+
+ตอนนี้ให้ทิปนักพัฒนาได้แล้ว
+อยู่ในการตั้งค่า ใต้ส่วนความคิดเห็น
+
+### 앱스토어 (베트남어)
+
+Giờ bạn có thể tip cho nhà phát triển
+Trong Cài đặt, bên dưới Góp ý
+
+### 앱스토어 (체코어)
+
+Vývojáři teď můžete dát spropitné
+V Nastavení pod Zpětnou vazbou
+
+### 앱스토어 (덴마크어)
+
+Nu kan du give udvikleren drikkepenge
+Under Feedback i Indstillinger
+
+### 앱스토어 (그리스어)
+
+Μπορείτε να αφήσετε φιλοδώρημα
+Στις Ρυθμίσεις, κάτω από τα Σχόλια
+
+### 앱스토어 (핀란드어)
+
+Voit nyt antaa kehittäjälle tipin
+Asetuksissa palautteen alla
+
+### 앱스토어 (인도네시아어)
+
+Kini Anda bisa memberi tip
+Di Pengaturan, di bawah Masukan
+
+### 앱스토어 (노르웨이어(보크말))
+
+Nå kan du gi utvikleren tips
+Under Tilbakemelding i Innstillinger
+
+### 앱스토어 (네덜란드어)
+
+Je kunt de ontwikkelaar een fooi geven
+Onder Feedback in Instellingen
+
+### 앱스토어 (폴란드어)
+
+Możesz teraz dać twórcy napiwek
+W Ustawieniach, pod Opiniami
+
+### 앱스토어 (스웨덴어)
+
+Nu kan du ge utvecklaren dricks
+Under Feedback i Inställningar
+
+### 앱스토어 (튀르키예어)
+
+Geliştiriciye bahşiş verebilirsiniz
+Ayarlar’da Geri Bildirim altında
+
 ## 1.0.12
 
 ### 앱스토어 (한국어)

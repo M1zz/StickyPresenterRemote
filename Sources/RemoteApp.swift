@@ -32,6 +32,8 @@ struct StickyPresenterRemoteApp: App {
         WindowGroup {
             RemoteRootView()
                 .environmentObject(client)
+                // 개발자 응원하기(팁) — 상품을 불러오고, 끝나지 않은 팁을 마저 센다.
+                .task { await RemoteSpec.tipJar.startStandalone() }
                 // 첫 실행에는 안내를 마친 뒤에 찾기를 시작한다 — 로컬 네트워크 허용 질문이
                 // 찾기와 함께 뜨므로, 무엇을 왜 묻는지 먼저 알려 준다.
                 .onAppear { if hasSeenOnboarding { client.start() } }

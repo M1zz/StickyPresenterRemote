@@ -98,3 +98,6 @@
 "분" = "Minuti";
 "Mac에서 ${minutes}분 타이머 시작" = "Avvia un timer di ${minutes} minuti sul Mac";
 "Mac 타이머" = "Timer del Mac";
+
+/* 응원(팁) — 나머지 문구는 LeeoKit 에 있다 */
+"리모컨을 %lld번 열었어요" = "Hai aperto il telecomando %lld volte";

@@ -12,6 +12,11 @@ struct RemoteSettingsView: View {
     var body: some View {
         NavigationStack {
             List {
+                // 리모컨을 자주 연 사람에게만 드물게 응원을 부탁한다 — 발표 중 화면이 아니라 설정에서.
+                LeeoTipAskSlot<RemoteSpec>(tipJar: RemoteSpec.tipJar, reached: RemoteTipMoments.reachedNow)
+                    .listRowInsets(EdgeInsets())
+                    .listRowBackground(Color.clear)
+
                 Section("도움말") {
                     Button {
                         dismiss()
@@ -29,6 +34,8 @@ struct RemoteSettingsView: View {
 
                 Section("의견 보내기") {
                     LeeoSupportSection<RemoteSpec>()
+                    // 판매 중인 팁이 있어야 선다
+                    LeeoTipJarLink<RemoteSpec>(tipJar: RemoteSpec.tipJar)
                 }
 
                 Section("문의") {
@@ -63,4 +70,19 @@ struct RemoteSettingsView: View {
         let build = info?["CFBundleVersion"] as? String ?? "?"
         return "\(version) (\(build))"
     }
+}
+
+// MARK: - 응원 부탁 순간
+
+/// 팁을 부탁할 순간 — 리모컨을 연 횟수(`LeeoEngagement` 가 센다). 큰 것부터.
+enum RemoteTipMoments {
+    static let launches = [100, 30, 10]
+
+    static func reached(launches count: Int) -> [LeeoTipMoment] {
+        launches.filter { count >= $0 }.map {
+            LeeoTipMoment(id: "launches.\($0)", message: String(localized: "리모컨을 \($0)번 열었어요"))
+        }
+    }
+
+    static var reachedNow: [LeeoTipMoment] { reached(launches: LeeoEngagement.shared.launchCount) }
 }

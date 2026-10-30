@@ -16,6 +16,13 @@ enum RemoteSpec: LeeoAppSpec {
         supportURL: URL(string: "https://m1zz.github.io/StickyPresenter/remote.html")!)
     static let monetization = LeeoMonetization.free
     static let appStoreID: String? = "6803358945"
+    /// 개발자 응원하기(팁, 소모성 세 가지 — 작은 것부터). 기능을 열지 않는다.
+    /// 무료 앱이라 LeeoStore 가 없다 — 앱이 뜰 때 `startStandalone()` 으로 혼자 선다.
+    @MainActor static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
+        "com.leeo.StickyPresenter.Remote.tip.small",
+        "com.leeo.StickyPresenter.Remote.tip.medium",
+        "com.leeo.StickyPresenter.Remote.tip.large"
+    ]))
     // 익명 사용 통계 → FeedbackHub. 없으면 bootstrap 이 스냅샷·app_open 을 건너뛴다.
     static let analytics: any LeeoAnalytics = LeeoUsageAnalytics(spec: RemoteSpec.self)
 
