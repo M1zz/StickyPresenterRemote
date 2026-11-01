@@ -8,7 +8,7 @@ import LeeoKit
 enum RemoteSpec: LeeoAppSpec {
     /// 식별 이름 — 피드백·통계 기록이 이 값으로 묶인다. 화면에 보이는 이름은 CFBundleDisplayName.
     static let appName = "StickyPresenterRemote"
-    static let developerEmail = "mizzking75@gmail.com"
+    static let developerEmail = "leeo@kakao.com"
     static let feedback = LeeoFeedbackConfig(containerIdentifier: "iCloud.com.Ysoup.FeedbackHub",
                                              appIdentifier: "com.leeo.StickyPresenter.Remote")
     static let legal = LeeoLegalConfig(
