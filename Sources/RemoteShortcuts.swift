@@ -20,7 +20,7 @@ struct StartMacTimerIntent: AppIntent {
     static var description = IntentDescription("Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다.")
     static var openAppWhenRun = true
 
-    @Parameter(title: "분", default: 5, inclusiveRange: (1, 600))
+    @Parameter(title: "분", description: "Mac에 띄울 타이머 길이(분)", default: 5, inclusiveRange: (1, 600))
     var minutes: Int
 
     static var parameterSummary: some ParameterSummary {

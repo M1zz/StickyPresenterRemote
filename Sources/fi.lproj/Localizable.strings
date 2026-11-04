@@ -96,6 +96,7 @@
 "Mac에서 타이머 시작" = "Käynnistä ajastin Macissa";
 "Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다." = "Käynnistää laskuriajastimen Macin StickyPresenterissa heti, kun kauko-ohjain yhdistyy.";
 "분" = "Minuutit";
+"Mac에 띄울 타이머 길이(분)" = "Macin ajastimen kesto minuutteina";
 "Mac에서 ${minutes}분 타이머 시작" = "Käynnistä ${minutes} minuutin ajastin Macissa";
 "Mac 타이머" = "Macin ajastin";
 

@@ -96,6 +96,7 @@
 "Mac에서 타이머 시작" = "Bắt đầu hẹn giờ trên Mac";
 "Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다." = "Khởi động bộ hẹn giờ đếm ngược trong StickyPresenter trên Mac ngay khi điều khiển từ xa kết nối.";
 "분" = "Phút";
+"Mac에 띄울 타이머 길이(분)" = "Thời lượng hẹn giờ trên Mac (phút)";
 "Mac에서 ${minutes}분 타이머 시작" = "Bắt đầu hẹn giờ ${minutes} phút trên Mac";
 "Mac 타이머" = "Hẹn giờ trên Mac";
 

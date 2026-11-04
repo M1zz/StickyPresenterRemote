@@ -96,6 +96,7 @@
 "Mac에서 타이머 시작" = "Spustit časovač na Macu";
 "Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다." = "Jakmile se dálkové ovládání připojí, spustí v StickyPresenter na Macu odpočítávání.";
 "분" = "Minuty";
+"Mac에 띄울 타이머 길이(분)" = "Délka časovače na Macu v minutách";
 "Mac에서 ${minutes}분 타이머 시작" = "Spustit časovač na ${minutes} min na Macu";
 "Mac 타이머" = "Časovač na Macu";
 

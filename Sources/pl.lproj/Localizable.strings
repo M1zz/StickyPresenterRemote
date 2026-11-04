@@ -96,6 +96,7 @@
 "Mac에서 타이머 시작" = "Uruchom minutnik na Macu";
 "Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다." = "Uruchamia minutnik odliczający w StickyPresenter na Macu, gdy tylko pilot się połączy.";
 "분" = "Minuty";
+"Mac에 띄울 타이머 길이(분)" = "Długość minutnika na Macu w minutach";
 "Mac에서 ${minutes}분 타이머 시작" = "Uruchom minutnik na ${minutes} min na Macu";
 "Mac 타이머" = "Minutnik na Macu";
 

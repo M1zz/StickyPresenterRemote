@@ -96,6 +96,7 @@
 "Mac에서 타이머 시작" = "Mac’te Zamanlayıcı Başlat";
 "Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다." = "Uzaktan kumanda bağlanır bağlanmaz Mac’inizdeki StickyPresenter’da geri sayım zamanlayıcısı başlatır.";
 "분" = "Dakika";
+"Mac에 띄울 타이머 길이(분)" = "Mac'teki zamanlayıcının süresi (dakika)";
 "Mac에서 ${minutes}분 타이머 시작" = "Mac’te ${minutes} dakikalık zamanlayıcı başlat";
 "Mac 타이머" = "Mac Zamanlayıcısı";
 

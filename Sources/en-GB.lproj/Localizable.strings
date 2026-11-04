@@ -96,6 +96,7 @@
 "Mac에서 타이머 시작" = "Start Timer on Mac";
 "Mac의 StickyPresenter에 카운트다운 타이머를 띄웁니다. 연결되는 즉시 시작합니다." = "Starts a countdown timer in StickyPresenter on your Mac as soon as the remote connects.";
 "분" = "Minutes";
+"Mac에 띄울 타이머 길이(분)" = "How long the timer on your Mac runs, in minutes";
 "Mac에서 ${minutes}분 타이머 시작" = "Start a ${minutes}-minute timer on Mac";
 "Mac 타이머" = "Mac Timer";
 
