@@ -29,6 +29,16 @@ enum RemoteSpec: LeeoAppSpec {
     /// 짝이 되는 Mac 앱 — 리모컨만으로는 아무것도 할 수 없어서 첫 실행 안내와 설정에서 권한다.
     static let macAppURL = URL(string: "https://apps.apple.com/app/id6778457299")!
     static let instagramURL = URL(string: "https://instagram.com/lee25_ios")!
+
+    /// **앞으로 만들 것**의 원본. 설정 ▸ 앞으로 만들 기능(`LeeoRoadmapView`)이 이 목록을 그대로 보여 준다.
+    /// 개발하다 "이건 다음에" 가 생기면 여기에 한 줄을 더한다(코드의 TODO 주석으로만 남기지 않는다).
+    /// 새 항목 `.planned` → 손대기 시작 `.building` → 내보냄 `.shipped("버전")`. id 는 바꾸지 않는다.
+    /// 문구는 사용자 말로, 24개 언어 모두 Sources/<언어>.lproj/Localizable.strings 에.
+    static var roadmap: [LeeoRoadmapItem] {[
+        .init(id: "watch", status: .shipped("1.1.0"),
+              title: String(localized: "Apple Watch"),
+              detail: String(localized: "발표 중 남은 시간을 손목 진동으로 알려 주고, 손목에서 시작·일시정지와 30초 조정을 해요.")),
+    ]}
 }
 
 // MARK: - 원격 킬스위치

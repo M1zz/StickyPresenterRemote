@@ -30,6 +30,7 @@ struct RemoteSettingsView: View {
                     Link(destination: RemoteSpec.macAppURL) {
                         Label("Mac 앱 받기", systemImage: "arrow.down.app")
                     }
+                    NavigationLink(LeeoRoadmapText.entry) { LeeoRoadmapView<RemoteSpec>() }
                 }
 
                 Section("의견 보내기") {

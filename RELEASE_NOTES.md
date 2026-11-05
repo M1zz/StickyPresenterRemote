@@ -4,127 +4,175 @@ DeployBar 가 배포할 때 이 파일의 `## <버전>` ▸ `### 앱스토어 (.
 리모컨 앱의 '이 버전의 새로운 기능' 칸에 그대로 올린다.
 Mac 앱 노트는 레포 최상단 `RELEASE_NOTES.md` 에 따로 있다.
 
-## 1.0.13
+## 1.1.0
 
 ### 앱스토어 (한국어)
 
+Apple Watch에서 발표 남은 시간을 봐요
+5분과 1분 남았을 때 손목이 울려요
+손목에서 시작과 일시정지, 30초 조정까지
 고마울 때 개발자에게 작은 팁을 보낼 수 있어요
-설정의 의견 보내기 아래에 있어요
 
 ### App Store (en-US)
 
+See time left on your Apple Watch
+Your wrist taps at 5 and 1 minute left
+Start, pause or adjust from your wrist
 You can now tip the developer
-Find it under Feedback in Settings
 
 ### App Store (en-GB)
 
+See time left on your Apple Watch
+Your wrist taps at 5 and 1 minute left
+Start, pause or adjust from your wrist
 You can now tip the developer
-Find it under Feedback in Settings
 
 ### 앱스토어 (일본어)
 
+Apple Watchで残り時間がわかります
+残り5分と1分で手首が振動します
+手首から開始、一時停止、30秒の調整
 開発者に小さなチップを送れるようになりました
-設定の「ご意見」の下にあります
 
 ### 앱스토어 (zh-Hans)
 
+在 Apple Watch 上查看演讲剩余时间
+剩 5 分钟和 1 分钟时手腕会振动
+在手腕上开始、暂停或调整 30 秒
 现在可以给开发者送一点小费了
-在设置的反馈下方
 
 ### 앱스토어 (스페인어)
 
+Ve el tiempo restante en tu Apple Watch
+La muñeca vibra a falta de 5 y 1 minuto
+Inicia, pausa o ajusta desde la muñeca
 Ya puedes dar propina al desarrollador
-Está en Ajustes, bajo Opiniones
 
 ### 앱스토어 (독일어)
 
+Restzeit jetzt auf der Apple Watch
+Vibration bei 5 und 1 Minute Rest
+Start, Pause und Feinjustierung am Arm
 Du kannst dem Entwickler Trinkgeld geben
-In den Einstellungen bei Feedback
 
 ### 앱스토어 (프랑스어)
 
+Le temps restant sur votre Apple Watch
+Votre poignet vibre à 5 et à 1 minute
+Démarrez, pausez ou ajustez au poignet
 Laissez un pourboire au développeur
-Dans Réglages, sous Retours
 
 ### 앱스토어 (이탈리아어)
 
+Il tempo rimanente su Apple Watch
+Il polso vibra a 5 e a 1 minuto
+Avvia, metti in pausa o regola dal polso
 Ora puoi lasciare una mancia
-In Impostazioni, sotto Feedback
 
 ### 앱스토어 (pt-BR)
 
+Veja o tempo restante no Apple Watch
+O pulso vibra faltando 5 e 1 minuto
+Inicie, pause ou ajuste pelo pulso
 Agora dá para dar gorjeta ao criador
-Fica em Ajustes, abaixo de Feedback
 
 ### 앱스토어 (러시아어)
 
+Оставшееся время на Apple Watch
+Запястье вибрирует за 5 и за 1 минуту
+Старт, пауза и сдвиг времени с запястья
 Теперь можно оставить чаевые
-Это в настройках, под отзывами
 
 ### 앱스토어 (zh-Hant)
 
+在 Apple Watch 上看簡報剩餘時間
+剩 5 分鐘和 1 分鐘時手腕會震動
+在手腕上開始、暫停或調整 30 秒
 現在可以給開發者一點小費了
-在設定的意見回饋下方
 
 ### 앱스토어 (태국어)
 
+ดูเวลาที่เหลือบน Apple Watch ได้แล้ว
+ข้อมือสั่นเมื่อเหลือ 5 นาทีและ 1 นาที
+เริ่ม หยุดชั่วคราว หรือปรับเวลาจากข้อมือ
 ตอนนี้ให้ทิปนักพัฒนาได้แล้ว
-อยู่ในการตั้งค่า ใต้ส่วนความคิดเห็น
 
 ### 앱스토어 (베트남어)
 
+Xem thời gian còn lại trên Apple Watch
+Cổ tay rung khi còn 5 phút và 1 phút
+Bắt đầu, tạm dừng, chỉnh giờ trên cổ tay
 Giờ bạn có thể tip cho nhà phát triển
-Trong Cài đặt, bên dưới Góp ý
 
 ### 앱스토어 (체코어)
 
+Zbývající čas uvidíte na Apple Watch
+Zápěstí zavibruje 5 a 1 minutu do konce
+Spustit, pozastavit i upravit ze zápěstí
 Vývojáři teď můžete dát spropitné
-V Nastavení pod Zpětnou vazbou
 
 ### 앱스토어 (덴마크어)
 
+Se den resterende tid på Apple Watch
+Håndleddet vibrerer ved 5 og 1 minut
+Start, pause eller juster fra håndleddet
 Nu kan du give udvikleren drikkepenge
-Under Feedback i Indstillinger
 
 ### 앱스토어 (그리스어)
 
+Ο υπόλοιπος χρόνος στο Apple Watch
+Δόνηση στον καρπό στα 5 και στο 1 λεπτό
+Έναρξη, παύση και ρύθμιση από τον καρπό
 Μπορείτε να αφήσετε φιλοδώρημα
-Στις Ρυθμίσεις, κάτω από τα Σχόλια
 
 ### 앱스토어 (핀란드어)
 
+Näe jäljellä oleva aika Apple Watchista
+Ranne värisee, kun 5 ja 1 min jäljellä
+Aloita, keskeytä ja säädä ranteesta
 Voit nyt antaa kehittäjälle tipin
-Asetuksissa palautteen alla
 
 ### 앱스토어 (인도네시아어)
 
+Lihat sisa waktu di Apple Watch
+Jam bergetar saat sisa 5 dan 1 menit
+Mulai, jeda, atau atur dari pergelangan
 Kini Anda bisa memberi tip
-Di Pengaturan, di bawah Masukan
 
 ### 앱스토어 (노르웨이어(보크말))
 
+Se gjenstående tid på Apple Watch
+Håndleddet vibrerer ved 5 og 1 minutt
+Start, pause eller juster fra håndleddet
 Nå kan du gi utvikleren tips
-Under Tilbakemelding i Innstillinger
 
 ### 앱스토어 (네덜란드어)
 
+Zie de resterende tijd op je Apple Watch
+Je pols trilt bij 5 en 1 minuut
+Start, pauzeer of stel bij vanaf je pols
 Je kunt de ontwikkelaar een fooi geven
-Onder Feedback in Instellingen
 
 ### 앱스토어 (폴란드어)
 
+Pozostały czas na Apple Watch
+Wibracja na 5 i 1 minutę przed końcem
+Start, pauza i korekta z nadgarstka
 Możesz teraz dać twórcy napiwek
-W Ustawieniach, pod Opiniami
 
 ### 앱스토어 (스웨덴어)
 
+Se återstående tid på Apple Watch
+Handleden vibrerar vid 5 och 1 minut
+Starta, pausa och justera på handleden
 Nu kan du ge utvecklaren dricks
-Under Feedback i Inställningar
 
 ### 앱스토어 (튀르키예어)
 
+Kalan süreyi Apple Watch’ta görün
+5 ve 1 dakika kala bileğiniz titrer
+Bileğinizden başlatın ve duraklatın
 Geliştiriciye bahşiş verebilirsiniz
-Ayarlar’da Geri Bildirim altında
 
 ## 1.0.12
 

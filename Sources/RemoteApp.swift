@@ -34,6 +34,8 @@ struct StickyPresenterRemoteApp: App {
                 .environmentObject(client)
                 // 개발자 응원하기(팁) — 상품을 불러오고, 끝나지 않은 팁을 마저 센다.
                 .task { await RemoteSpec.tipJar.startStandalone() }
+                // Apple Watch 와 잇는다 — 워치의 남은 시간 · 진동 · 버튼이 이 리모컨을 거쳐 Mac 에 닿는다.
+                .task { WatchRelay.shared.start(with: client) }
                 // 첫 실행에는 안내를 마친 뒤에 찾기를 시작한다 — 로컬 네트워크 허용 질문이
                 // 찾기와 함께 뜨므로, 무엇을 왜 묻는지 먼저 알려 준다.
                 .onAppear { if hasSeenOnboarding { client.start() } }

@@ -102,3 +102,7 @@
 
 /* 응원(팁) — 나머지 문구는 LeeoKit 에 있다 */
 "리모컨을 %lld번 열었어요" = "You’ve opened the remote %lld times";
+
+/* 앞으로 만들 기능(로드맵) */
+"Apple Watch" = "Apple Watch";
+"발표 중 남은 시간을 손목 진동으로 알려 주고, 손목에서 시작·일시정지와 30초 조정을 해요." = "Your wrist taps when time runs low, and you can start, pause or adjust by 30 seconds right from your watch.";

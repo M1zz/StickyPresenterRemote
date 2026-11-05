@@ -37,6 +37,9 @@ StickyPresenterRemote는 Mac용 StickyPresenter의 iPhone 리모컨입니다. �
 • Mac 화면 배치를 줄여 그린 판에서 끌어 위젯 옮기기 — 슬라이드를 가리면 Mac에 손대지 않고 비켜 놓고, 확장 디스플레이가 있으면 옆 화면으로 넘깁니다
 • 청중에게서 위젯 감추기, 놓친 위젯 패널 옆으로 불러오기, 타이머 지우기
 
+Apple Watch
+발표 중에는 화면을 들여다볼 틈이 없습니다. Apple Watch에 남은 시간이 크게 보이고, 5분과 1분 남았을 때, 그리고 끝날 때 손목이 울립니다. 재생 버튼으로 시작·일시정지하고, Digital Crown을 한 칸 돌릴 때마다 30초씩 더하거나 뺍니다. 지원하는 모델에서는 손가락 두 번 두드리기로도 시작·일시정지하고, 단축어로 Apple Watch Ultra의 동작 버튼에 걸어 둘 수 있습니다. 시계 화면에 컴플리케이션을 두면 손목만 들어도 남은 시간이 보입니다. 워치는 이 iPhone 리모컨을 거쳐 Mac에 닿으므로 조작하려면 iPhone에서 리모컨이 열려 있어야 합니다. iPhone이 잠겨도 남은 시간과 진동은 워치가 혼자 이어 갑니다.
+
 연결 방식
 두 앱은 로컬 네트워크에서 서로를 찾아 직접 주고받습니다. 만들 계정도, 중간에 거치는 서버도 없고, 인터넷으로 나가는 통신도 없습니다.
 
@@ -96,6 +99,9 @@ WHAT YOU CAN DO
 • Resize the widget — S, M, or L — so it reads from the back of the room
 • Move the widget by dragging it on a miniature of your Mac's screen layout. If it covers a slide, move it off without touching your Mac. With a second display, drag it across to the other screen.
 • Hide the widget from your audience, pull a lost one back next to the panel, or delete the timer
+
+APPLE WATCH
+While you present, there is no time to keep checking a screen. Apple Watch shows the time left in large type and taps your wrist at 5 minutes, at 1 minute, and when time is up. Start or pause with the play button, and turn the Digital Crown one notch to add or subtract 30 seconds. On supported models a double tap also starts or pauses, and with Shortcuts you can put it on the Action button of Apple Watch Ultra. Add the complication to your watch face to see the time left with a raise of the wrist. The watch reaches your Mac through this iPhone remote, so keep the remote open on your iPhone to control the timer. If your iPhone locks, the watch keeps counting and tapping on its own.
 
 HOW IT CONNECTS
 The two apps find each other over your local network and talk directly, with no account to create and no server in the middle. Nothing is sent over the internet.
@@ -157,6 +163,9 @@ WHAT YOU CAN DO
 • Move the widget by dragging it on a miniature of your Mac's screen layout. If it is covering a slide, shift it out of the way without going near your Mac. With a second display, drag it across to the other screen.
 • Hide the widget from your audience, bring a lost one back beside the panel, or delete the timer
 
+APPLE WATCH
+While you present, there is no time to keep checking a screen. Apple Watch shows the time left in large type and taps your wrist at 5 minutes, at 1 minute, and when time is up. Start or pause with the play button, and turn the Digital Crown one notch to add or subtract 30 seconds. On supported models a double tap also starts or pauses, and with Shortcuts you can put it on the Action button of Apple Watch Ultra. Add the complication to your watch face to see the time left with a raise of the wrist. The watch reaches your Mac through this iPhone remote, so keep the remote open on your iPhone to control the timer. If your iPhone locks, the watch keeps counting and tapping on its own.
+
 HOW IT CONNECTS
 The two apps find each other on your local network and talk directly. There is no account to create and no server in between, and nothing is sent over the internet.
 
@@ -216,6 +225,9 @@ StickyPresenterRemoteは、Mac用アプリStickyPresenterのiPhoneリモコン�
 • ウィジェットのサイズをS、M、Lに切り替えて、後ろの席からも読みやすく
 • Macの画面配置を縮小したパッド上でドラッグしてウィジェットを移動。スライドに重なってもMacに触れずによけられ、外部ディスプレイがあれば隣の画面へ移せます
 • 聴衆からウィジェットを隠す、見失ったウィジェットをパネルの横に呼び戻す、タイマーを削除する
+
+Apple Watchで
+発表中は画面を見る余裕がありません。Apple Watchに残り時間を大きく表示し、残り5分と1分、そして終了時に手首を振動で知らせます。再生ボタンで開始・一時停止、Digital Crownを1段回すごとに30秒増やしたり減らしたりできます。対応モデルではダブルタップでも開始・一時停止でき、ショートカットを使えばApple Watch Ultraのアクションボタンにも割り当てられます。文字盤にコンプリケーションを置けば、手首を上げるだけで残り時間がわかります。WatchはこのiPhoneリモコンを通じてMacにつながるため、操作するにはiPhoneでリモコンを開いておく必要があります。iPhoneがロックされても、残り時間の表示と振動はWatchだけで続きます。
 
 接続のしくみ
 2つのアプリはローカルネットワーク上でお互いを見つけ、直接やり取りします。アカウント登録も、間に入るサーバもなく、インターネットへの通信もありません。
@@ -277,6 +289,9 @@ StickyPresenterRemote 是 Mac 版 StickyPresenter 的 iPhone 遥控器。演讲�
 • 在按比例缩小的 Mac 屏幕布局上拖动，移动小组件。挡住幻灯片时不用碰 Mac 就能挪开；接了扩展显示器，还能拖到另一块屏幕上
 • 对观众隐藏小组件，把找不到的小组件召回到面板旁边，或删除计时器
 
+Apple Watch
+演讲时没空一直盯着屏幕。Apple Watch 会用大字显示剩余时间，并在剩 5 分钟、剩 1 分钟和时间到时轻敲你的手腕。按播放按钮开始或暂停，转动数码表冠一格即可增加或减少 30 秒。在支持的机型上还可以用双指互点两下开始或暂停，借助快捷指令也能把它设到 Apple Watch Ultra 的操作按钮上。把复杂功能放到表盘上，抬腕就能看到剩余时间。手表通过这台 iPhone 遥控器连接 Mac，所以要操控时请在 iPhone 上保持遥控器打开。即使 iPhone 锁屏，手表也会继续倒计时并按时振动。
+
 连接方式
 两个 App 在本地网络中互相发现并直接通信。不用注册账户，中间没有服务器，也不会通过互联网传输任何数据。
 
@@ -336,6 +351,9 @@ QUÉ PUEDES HACER
 • Cambiar el tamaño del widget entre S, M y L para que se lea desde el fondo de la sala
 • Mover el widget arrastrándolo sobre una miniatura de la disposición de pantallas del Mac. Si tapa una diapositiva, apártalo sin tocar el Mac. Con una segunda pantalla, pásalo a la otra.
 • Ocultar el widget al público, traer uno perdido junto al panel o eliminar el temporizador
+
+APPLE WATCH
+Mientras presentas no hay tiempo para mirar pantallas. El Apple Watch muestra el tiempo restante en grande y te avisa con una vibración en la muñeca cuando quedan 5 minutos, cuando queda 1 y al terminar. Inicia o pausa con el botón de reproducción y gira la Digital Crown una muesca para sumar o restar 30 segundos. En los modelos compatibles también puedes iniciar o pausar con un doble toque, y con Atajos puedes asignarlo al botón de acción del Apple Watch Ultra. Añade la complicación a la esfera para ver el tiempo restante con solo levantar la muñeca. El reloj llega al Mac a través de este mando del iPhone, así que mantén el mando abierto en el iPhone para controlar el temporizador. Si el iPhone se bloquea, el reloj sigue contando y vibrando por su cuenta.
 
 CÓMO SE CONECTA
 Las dos apps se encuentran en tu red local y se comunican directamente. No hay que crear ninguna cuenta ni hay servidores de por medio, y no sale nada a internet.
@@ -397,6 +415,9 @@ DAS KANNST DU TUN
 • Widget verschieben, indem du es auf einer Miniatur deiner Mac-Bildschirmanordnung ziehst. Verdeckt es eine Folie, schiebst du es weg, ohne den Mac anzufassen. Mit einem zweiten Display ziehst du es auf den anderen Bildschirm.
 • Widget vor dem Publikum ausblenden, ein verlorenes neben das Panel zurückholen oder den Timer löschen
 
+APPLE WATCH
+Beim Präsentieren hast du keine Zeit, ständig auf einen Bildschirm zu schauen. Die Apple Watch zeigt die Restzeit groß an und tippt dir bei 5 Minuten, bei 1 Minute und am Ende aufs Handgelenk. Starten oder pausieren geht mit der Wiedergabetaste, und jede Raste der Digital Crown fügt 30 Sekunden hinzu oder zieht sie ab. Auf unterstützten Modellen startest oder pausierst du auch mit Doppeltippen, und über Kurzbefehle legst du es auf die Aktionstaste der Apple Watch Ultra. Leg die Komplikation aufs Zifferblatt, dann siehst du die Restzeit, sobald du das Handgelenk hebst. Die Uhr erreicht deinen Mac über diese iPhone-Fernbedienung. Lass die Fernbedienung auf dem iPhone also geöffnet, wenn du steuern willst. Sperrt sich das iPhone, zählt und vibriert die Uhr allein weiter.
+
 SO VERBINDET SICH DIE APP
 Die beiden Apps finden sich in deinem lokalen Netzwerk und sprechen direkt miteinander. Kein Konto, kein Server dazwischen, und nichts geht ins Internet.
 
@@ -456,6 +477,9 @@ CE QUE VOUS POUVEZ FAIRE
 • Passer le widget en taille S, M ou L pour qu’on le lise depuis le fond de la salle
 • Déplacer le widget en le faisant glisser sur une miniature de la disposition des écrans du Mac. S’il masque une diapo, écartez-le sans toucher au Mac. Avec un second écran, faites-le passer de l’autre côté.
 • Masquer le widget au public, ramener un widget égaré à côté du panneau ou supprimer le minuteur
+
+APPLE WATCH
+Pendant une présentation, impossible de garder les yeux sur un écran. L’Apple Watch affiche le temps restant en grand et vous tapote le poignet à 5 minutes, à 1 minute et à la fin. Démarrez ou mettez en pause avec le bouton de lecture, et tournez la Digital Crown d’un cran pour ajouter ou retirer 30 secondes. Sur les modèles compatibles, un toucher double démarre ou met aussi en pause, et avec Raccourcis vous pouvez l’attribuer au bouton Action de l’Apple Watch Ultra. Ajoutez la complication au cadran pour voir le temps restant d’un simple geste du poignet. La montre rejoint votre Mac par cette télécommande iPhone : gardez donc la télécommande ouverte sur l’iPhone pour piloter le minuteur. Si l’iPhone se verrouille, la montre continue seule le décompte et les vibrations.
 
 COMMENT ÇA SE CONNECTE
 Les deux apps se trouvent sur votre réseau local et communiquent directement. Aucun compte à créer, aucun serveur intermédiaire, et rien ne passe par Internet.
@@ -517,6 +541,9 @@ COSA PUOI FARE
 • Spostare il widget trascinandolo su una miniatura della disposizione degli schermi del Mac. Se copre una slide, lo sposti senza toccare il Mac. Con un secondo schermo, lo porti sull’altro.
 • Nascondere il widget al pubblico, riportare accanto al pannello uno che hai perso di vista o eliminare il timer
 
+APPLE WATCH
+Mentre presenti non hai tempo di guardare uno schermo. Apple Watch mostra il tempo rimanente in grande e ti avvisa con un tocco al polso a 5 minuti, a 1 minuto e alla fine. Avvia o metti in pausa con il pulsante di riproduzione e ruota la Digital Crown di uno scatto per aggiungere o togliere 30 secondi. Sui modelli compatibili puoi avviare o mettere in pausa anche con il doppio tocco, e con Comandi puoi assegnarlo al tasto Azione di Apple Watch Ultra. Aggiungi la complicazione al quadrante per vedere il tempo rimanente alzando il polso. L’orologio raggiunge il Mac tramite questo telecomando su iPhone, quindi tieni aperto il telecomando sull’iPhone per controllare il timer. Se l’iPhone si blocca, l’orologio continua da solo a contare e a vibrare.
+
 COME SI COLLEGA
 Le due app si trovano sulla rete locale e comunicano direttamente. Nessun account da creare, nessun server in mezzo, e nulla passa da internet.
 
@@ -576,6 +603,9 @@ O QUE VOCÊ PODE FAZER
 • Mudar o tamanho do widget para S, M ou L, para ficar legível até do fundo da sala
 • Mover o widget arrastando-o em uma miniatura da disposição das telas do Mac. Se ele cobrir um slide, tire-o do caminho sem encostar no Mac. Com uma segunda tela, arraste-o para a outra.
 • Ocultar o widget do público, trazer de volta para perto do painel um widget perdido ou apagar o timer
+
+APPLE WATCH
+Durante a apresentação, não dá para ficar olhando para uma tela. O Apple Watch mostra o tempo restante em letras grandes e toca no seu pulso quando faltam 5 minutos, quando falta 1 e no fim. Inicie ou pause com o botão de reproduzir e gire a Digital Crown um clique para adicionar ou tirar 30 segundos. Nos modelos compatíveis, o toque duplo também inicia ou pausa, e com o app Atalhos você pode colocar isso no botão de Ação do Apple Watch Ultra. Adicione a complicação ao mostrador para ver o tempo restante só de levantar o pulso. O relógio chega ao Mac por meio deste controle no iPhone, então deixe o controle aberto no iPhone para comandar o timer. Se o iPhone bloquear, o relógio continua contando e vibrando sozinho.
 
 COMO SE CONECTA
 Os dois apps se encontram na sua rede local e conversam diretamente. Não é preciso criar conta, não há servidor no meio e nada sai para a internet.
@@ -637,6 +667,9 @@ StickyPresenterRemote — пульт для iPhone к приложению Stick
 • Перемещать виджет, перетаскивая его на уменьшенной схеме экранов Mac. Если он закрывает слайд, уберите его, не подходя к Mac. Есть второй дисплей — перетащите виджет на него.
 • Скрывать виджет от зрителей, возвращать потерявшийся виджет к панели или удалять таймер
 
+APPLE WATCH
+Во время выступления некогда поглядывать на экран. Apple Watch крупно показывают оставшееся время и мягко касаются запястья, когда остается 5 минут, 1 минута и когда время вышло. Запуск и пауза — кнопкой воспроизведения, а каждый щелчок колесика Digital Crown добавляет или убирает 30 секунд. На поддерживаемых моделях запускать и ставить на паузу можно и двойным касанием, а через Быстрые команды — назначить это на кнопку действия Apple Watch Ultra. Добавьте расширение на циферблат, и оставшееся время будет видно, стоит лишь поднять руку. Часы связываются с Mac через этот пульт на iPhone, поэтому для управления держите пульт открытым на iPhone. Если iPhone заблокируется, часы сами продолжат отсчет и вибрацию.
+
 КАК ПРОИСХОДИТ ПОДКЛЮЧЕНИЕ
 Оба приложения находят друг друга в локальной сети и общаются напрямую. Не нужно заводить аккаунт, нет промежуточного сервера, и ничего не уходит в интернет.
 
@@ -696,6 +729,9 @@ StickyPresenterRemote 是 Mac 版 StickyPresenter 的 iPhone 遙控器。上台�
 • 把小工具大小切換成 S、M、L，坐在最後一排也看得清楚
 • 在等比例縮小的 Mac 螢幕配置上拖移，移動小工具。擋到投影片時不必碰 Mac 就能移開；接了延伸顯示器，還能拖到另一個螢幕
 • 對觀眾隱藏小工具、把找不到的小工具叫回面板旁邊，或刪除計時器
+
+Apple Watch
+簡報時沒空一直看螢幕。Apple Watch 會用大字顯示剩餘時間，並在剩 5 分鐘、剩 1 分鐘和時間到時輕點你的手腕。按播放按鈕開始或暫停，轉動數位錶冠一格就能加減 30 秒。在支援的機型上也能用點兩下手勢開始或暫停，透過捷徑還能把它設定到 Apple Watch Ultra 的動作按鈕。把複雜功能放上錶面，抬起手腕就看得到剩餘時間。手錶是透過這支 iPhone 遙控器連到 Mac，所以要操控時請在 iPhone 上保持遙控器開啟。就算 iPhone 鎖定，手錶也會自己繼續倒數並按時震動。
 
 連線方式
 兩個 App 會在區域網路中找到彼此並直接溝通。不必註冊帳號，中間沒有伺服器，也不會透過網際網路傳送任何資料。
@@ -757,6 +793,9 @@ StickyPresenterRemote คือรีโมตบน iPhone สำหรับ�
 • ลากวิดเจ็ตบนภาพย่อของการจัดหน้าจอ Mac เพื่อย้ายตำแหน่ง ถ้าบังสไลด์ก็ย้ายออกได้โดยไม่ต้องแตะ Mac และถ้ามีจอเสริมก็ลากไปอีกจอได้
 • ซ่อนวิดเจ็ตจากผู้ชม เรียกวิดเจ็ตที่หาไม่เจอกลับมาไว้ข้างแผงควบคุม หรือลบตัวจับเวลา
 
+Apple Watch
+ระหว่างนำเสนอไม่มีเวลามาคอยดูหน้าจอ Apple Watch จะแสดงเวลาที่เหลือตัวใหญ่ และแตะเตือนที่ข้อมือเมื่อเหลือ 5 นาที เหลือ 1 นาที และเมื่อหมดเวลา กดปุ่มเล่นเพื่อเริ่มหรือหยุดชั่วคราว และหมุน Digital Crown หนึ่งขั้นเพื่อเพิ่มหรือลด 30 วินาที รุ่นที่รองรับยังแตะสองครั้งเพื่อเริ่มหรือหยุดชั่วคราวได้ และใช้คำสั่งลัดตั้งให้ปุ่มแอ็คชั่นของ Apple Watch Ultra ได้ด้วย เพิ่มคอมพลิเคชั่นไว้บนหน้าปัด แค่ยกข้อมือก็เห็นเวลาที่เหลือ นาฬิกาเชื่อมกับ Mac ผ่านรีโมตบน iPhone นี้ จึงต้องเปิดรีโมตบน iPhone ค้างไว้เมื่อต้องการควบคุม ถ้า iPhone ล็อกไป นาฬิกาก็ยังนับถอยหลังและสั่นเตือนต่อเองได้
+
 การเชื่อมต่อ
 แอปทั้งสองค้นหากันเองในเครือข่ายภายในและสื่อสารกันโดยตรง ไม่ต้องสมัครบัญชี ไม่มีเซิร์ฟเวอร์คั่นกลาง และไม่มีการส่งข้อมูลออกไปทางอินเทอร์เน็ต
 
@@ -816,6 +855,9 @@ BẠN CÓ THỂ LÀM GÌ
 • Đổi kích thước widget sang S, M hoặc L để người ngồi cuối phòng vẫn đọc được
 • Kéo widget trên hình thu nhỏ bố cục màn hình của Mac để di chuyển. Nếu widget che slide, bạn dời nó đi mà không cần chạm vào Mac. Có màn hình phụ thì kéo sang màn hình kia.
 • Ẩn widget khỏi khán giả, gọi widget bị lạc về cạnh bảng điều khiển hoặc xóa bộ hẹn giờ
+
+APPLE WATCH
+Khi thuyết trình, bạn không có thời gian nhìn màn hình. Apple Watch hiển thị thời gian còn lại bằng chữ lớn và chạm nhẹ vào cổ tay khi còn 5 phút, còn 1 phút và khi hết giờ. Bắt đầu hoặc tạm dừng bằng nút phát, xoay Digital Crown một nấc để thêm hoặc bớt 30 giây. Trên các mẫu được hỗ trợ, bạn cũng có thể chạm hai lần để bắt đầu hoặc tạm dừng, và dùng Phím tắt để gán vào nút Tác vụ của Apple Watch Ultra. Thêm tổ hợp lên mặt đồng hồ để chỉ cần nâng cổ tay là thấy thời gian còn lại. Đồng hồ kết nối với Mac thông qua điều khiển trên iPhone này, vì vậy hãy để điều khiển mở trên iPhone khi muốn điều khiển. Nếu iPhone khóa màn hình, đồng hồ vẫn tự đếm ngược và rung báo.
 
 CÁCH KẾT NỐI
 Hai ứng dụng tự tìm thấy nhau trong mạng cục bộ và trao đổi trực tiếp. Không cần tạo tài khoản, không có máy chủ trung gian và không gửi gì ra Internet.
@@ -877,6 +919,9 @@ CO UMÍ
 • Přesouvat widget tažením po zmenšeném rozložení obrazovek Macu. Když zakrývá slide, odsunete ho, aniž byste se Macu dotkli. S druhým displejem ho přetáhnete na vedlejší obrazovku.
 • Skrýt widget před publikem, vrátit ztracený widget k panelu nebo smazat časovač
 
+APPLE WATCH
+Při prezentaci není čas koukat na displej. Apple Watch ukazují zbývající čas velkým písmem a klepnou vám na zápěstí, když zbývá 5 minut, 1 minuta a když čas vyprší. Spouštějte a pozastavujte tlačítkem přehrávání a každým cvaknutím korunky Digital Crown přidáte nebo uberete 30 sekund. Na podporovaných modelech funguje i dvojité klepnutí a přes Zkratky si to můžete přiřadit k Akčnímu tlačítku na Apple Watch Ultra. Přidejte komplikaci na ciferník a zbývající čas uvidíte, jen co zvednete zápěstí. Hodinky se k Macu dostanou přes tento ovladač v iPhonu, takže pro ovládání mějte ovladač v iPhonu otevřený. Když se iPhone zamkne, hodinky dál samy odpočítávají a vibrují.
+
 JAK SE PŘIPOJUJE
 Obě aplikace se najdou v místní síti a komunikují přímo. Žádný účet, žádný server uprostřed a nic nejde do internetu.
 
@@ -936,6 +981,9 @@ DET KAN DU
 • Skifte widgetstørrelsen til S, M eller L, så den kan læses helt nede bagerst
 • Flytte widgetten ved at trække den på en miniature af din Macs skærmopsætning. Dækker den et dias, flytter du den uden at røre din Mac. Med en ekstra skærm trækker du den over på den anden.
 • Skjule widgetten for publikum, hente en forsvundet widget tilbage ved siden af panelet eller slette timeren
+
+APPLE WATCH
+Når du præsenterer, er der ikke tid til at kigge på en skærm. Apple Watch viser den resterende tid med store tal og giver et tryk på håndleddet ved 5 minutter, ved 1 minut og når tiden er gået. Start eller sæt på pause med afspilningsknappen, og drej Digital Crown et hak for at lægge 30 sekunder til eller trække dem fra. På understøttede modeller kan du også bruge dobbelttryk, og med Genveje kan du lægge det på Handlingsknappen på Apple Watch Ultra. Føj komplikationen til urskiven, så ser du den resterende tid, bare du løfter håndleddet. Uret når din Mac via denne fjernbetjening på iPhone, så hold fjernbetjeningen åben på iPhone, når du vil styre timeren. Låses iPhone, fortsætter uret selv med at tælle ned og vibrere.
 
 SÅDAN FORBINDER DEN
 De to apps finder hinanden på dit lokale netværk og taler direkte sammen. Ingen konto, ingen server imellem, og intet sendes over internettet.
@@ -997,6 +1045,9 @@ StickyPresenterRemote
 • Μετακίνηση του widget σέρνοντάς το πάνω σε μια μικρογραφία της διάταξης οθονών του Mac. Αν κρύβει μια διαφάνεια, το απομακρύνετε χωρίς να αγγίξετε το Mac. Με δεύτερη οθόνη, το σέρνετε στην άλλη.
 • Απόκρυψη του widget από το κοινό, επαναφορά ενός χαμένου widget δίπλα στο πάνελ ή διαγραφή του χρονομέτρου
 
+APPLE WATCH
+Την ώρα της παρουσίασης δεν προλαβαίνετε να κοιτάτε οθόνες. Το Apple Watch δείχνει τον υπόλοιπο χρόνο με μεγάλα ψηφία και σας ειδοποιεί με ένα άγγιγμα στον καρπό στα 5 λεπτά, στο 1 λεπτό και στο τέλος. Ξεκινήστε ή κάντε παύση με το κουμπί αναπαραγωγής και γυρίστε το Digital Crown κατά ένα βήμα για να προσθέσετε ή να αφαιρέσετε 30 δευτερόλεπτα. Στα συμβατά μοντέλα λειτουργεί και το διπλό πάτημα, ενώ μέσω των Συντομεύσεων μπορείτε να το βάλετε στο κουμπί Ενέργειας του Apple Watch Ultra. Προσθέστε την επιπλοκή στην πρόσοψη και θα βλέπετε τον υπόλοιπο χρόνο μόλις σηκώσετε τον καρπό. Το ρολόι φτάνει στο Mac μέσω αυτού του τηλεχειριστηρίου στο iPhone, οπότε κρατήστε το τηλεχειριστήριο ανοιχτό στο iPhone για να ελέγχετε το χρονόμετρο. Αν κλειδώσει το iPhone, το ρολόι συνεχίζει μόνο του την αντίστροφη μέτρηση και τις δονήσεις.
+
 ΠΩΣ ΣΥΝΔΕΕΤΑΙ
 Οι δύο εφαρμογές βρίσκουν η μία την άλλη στο τοπικό σας δίκτυο και επικοινωνούν απευθείας. Δεν χρειάζεται λογαριασμός, δεν υπάρχει διακομιστής στη μέση και τίποτα δεν στέλνεται στο διαδίκτυο.
 
@@ -1056,6 +1107,9 @@ MITÄ VOIT TEHDÄ
 • Vaihda widgetin kooksi S, M tai L, jotta se näkyy takariviin asti
 • Siirrä widgetiä vetämällä sitä Macin näyttöjärjestelyn pienoiskuvassa. Jos se peittää dian, siirrät sen pois koskematta Maciin. Toisen näytön kanssa vedät sen viereiselle näytölle.
 • Piilota widget yleisöltä, tuo kadonnut widget takaisin paneelin viereen tai poista ajastin
+
+APPLE WATCH
+Esittäessä ei ehdi tuijottaa näyttöä. Apple Watch näyttää jäljellä olevan ajan isolla ja napauttaa rannetta, kun jäljellä on 5 minuuttia, 1 minuutti ja kun aika loppuu. Aloita tai keskeytä toistopainikkeella, ja käännä Digital Crownia pykälä lisätäksesi tai vähentääksesi 30 sekuntia. Tuetuissa malleissa myös kaksoisnapautus aloittaa tai keskeyttää, ja Pikakomennoilla voit liittää sen Apple Watch Ultran toimintopainikkeeseen. Lisää komplikaatio kellotauluun, niin näet jäljellä olevan ajan pelkällä ranteen nostolla. Kello yltää Maciin tämän iPhonen kaukosäätimen kautta, joten pidä kaukosäädin auki iPhonessa, kun haluat ohjata ajastinta. Jos iPhone lukittuu, kello jatkaa laskemista ja värinöitä itsekseen.
 
 MITEN YHTEYS TOIMII
 Apit löytävät toisensa paikallisverkosta ja viestivät suoraan keskenään. Ei tiliä, ei palvelinta välissä, eikä mitään lähetetä internetiin.
@@ -1117,6 +1171,9 @@ YANG BISA ANDA LAKUKAN
 • Pindahkan widget dengan menyeretnya di miniatur susunan layar Mac. Jika menutupi slide, geser tanpa menyentuh Mac. Dengan layar kedua, seret ke layar sebelah.
 • Sembunyikan widget dari penonton, panggil kembali widget yang hilang ke samping panel, atau hapus timer
 
+APPLE WATCH
+Saat presentasi, tak ada waktu untuk terus melihat layar. Apple Watch menampilkan sisa waktu dengan angka besar dan mengetuk pergelangan tangan saat sisa 5 menit, sisa 1 menit, dan saat waktu habis. Mulai atau jeda dengan tombol putar, dan putar Digital Crown satu klik untuk menambah atau mengurangi 30 detik. Di model yang didukung, ketuk dua kali juga bisa memulai atau menjeda, dan lewat Pintasan Anda bisa memasangnya di tombol Tindakan Apple Watch Ultra. Tambahkan komplikasi ke tampilan jam agar sisa waktu terlihat hanya dengan mengangkat pergelangan. Jam terhubung ke Mac melalui remote di iPhone ini, jadi biarkan remote tetap terbuka di iPhone untuk mengendalikan timer. Jika iPhone terkunci, jam tetap menghitung mundur dan bergetar sendiri.
+
 CARA TERHUBUNG
 Kedua aplikasi saling menemukan di jaringan lokal dan berkomunikasi langsung. Tidak perlu membuat akun, tidak ada server di tengah, dan tidak ada yang dikirim ke internet.
 
@@ -1176,6 +1233,9 @@ DETTE KAN DU GJØRE
 • Endre widget-størrelsen til S, M eller L, så den kan leses helt bakerst i rommet
 • Flytte widgeten ved å dra den på en miniatyr av skjermoppsettet på Macen. Dekker den et lysbilde, flytter du den uten å røre Macen. Med en ekstra skjerm drar du den over til den andre.
 • Skjule widgeten for publikum, hente en borte widget tilbake ved siden av panelet eller slette tidtakeren
+
+APPLE WATCH
+Når du presenterer, har du ikke tid til å se på en skjerm. Apple Watch viser gjenstående tid med store tall og gir deg et trykk på håndleddet ved 5 minutter, ved 1 minutt og når tiden er ute. Start eller sett på pause med avspillingsknappen, og vri Digital Crown ett hakk for å legge til eller trekke fra 30 sekunder. På modeller som støtter det, kan du også bruke dobbelttrykk, og med Snarveier kan du legge det på Handlingsknappen på Apple Watch Ultra. Legg komplikasjonen på urskiven, så ser du gjenstående tid bare ved å løfte håndleddet. Klokken når Macen via denne fjernkontrollen på iPhone, så hold fjernkontrollen åpen på iPhone når du vil styre tidtakeren. Låses iPhone, fortsetter klokken selv å telle ned og vibrere.
 
 SLIK KOBLER DEN TIL
 De to appene finner hverandre på det lokale nettverket og snakker direkte sammen. Ingen konto, ingen server i midten, og ingenting sendes over internett.
@@ -1237,6 +1297,9 @@ WAT JE KUNT DOEN
 • De widget verplaatsen door hem te slepen op een miniatuur van de schermindeling van je Mac. Zit hij voor een dia, dan schuif je hem weg zonder je Mac aan te raken. Met een tweede scherm sleep je hem naar het andere scherm.
 • De widget verbergen voor het publiek, een kwijtgeraakte widget terughalen naast het paneel of de timer verwijderen
 
+APPLE WATCH
+Tijdens een presentatie heb je geen tijd om naar een scherm te kijken. Apple Watch toont de resterende tijd in grote cijfers en tikt op je pols bij 5 minuten, bij 1 minuut en als de tijd om is. Start of pauzeer met de afspeelknop en draai de Digital Crown één klik om 30 seconden toe te voegen of eraf te halen. Op ondersteunde modellen kan dat ook met dubbeltikken, en via Opdrachten zet je het op de Actieknop van Apple Watch Ultra. Zet de complicatie op je wijzerplaat en je ziet de resterende tijd zodra je je pols optilt. Het horloge bereikt je Mac via deze afstandsbediening op je iPhone, dus houd de afstandsbediening open op je iPhone om de timer te bedienen. Vergrendelt je iPhone, dan blijft het horloge zelf aftellen en trillen.
+
 ZO MAAKT HIJ VERBINDING
 De twee apps vinden elkaar op je lokale netwerk en praten rechtstreeks met elkaar. Geen account, geen server ertussen en er gaat niets over het internet.
 
@@ -1296,6 +1359,9 @@ CO MOŻESZ ZROBIĆ
 • Zmienić rozmiar widżetu na S, M lub L, by był czytelny nawet z ostatniego rzędu
 • Przesuwać widżet, przeciągając go na miniaturze układu ekranów Maca. Jeśli zasłania slajd, odsuniesz go bez dotykania Maca. Przy drugim monitorze przeciągniesz go na sąsiedni ekran.
 • Ukryć widżet przed publicznością, przywołać zagubiony widżet obok panelu lub usunąć minutnik
+
+APPLE WATCH
+Podczas prezentacji nie ma czasu zerkać na ekran. Apple Watch pokazuje pozostały czas dużymi cyframi i stuka w nadgarstek, gdy zostaje 5 minut, 1 minuta i gdy czas się kończy. Uruchamiaj i wstrzymuj przyciskiem odtwarzania, a każdy ząbek Digital Crown dodaje lub odejmuje 30 sekund. Na obsługiwanych modelach działa też podwójne stuknięcie, a przez Skróty możesz przypisać to do przycisku czynności w Apple Watch Ultra. Dodaj komplikację do tarczy, a pozostały czas zobaczysz, gdy tylko uniesiesz nadgarstek. Zegarek łączy się z Makiem przez tego pilota na iPhonie, więc aby sterować minutnikiem, trzymaj pilota otwartego na iPhonie. Gdy iPhone się zablokuje, zegarek sam dalej odlicza i wibruje.
 
 JAK SIĘ ŁĄCZY
 Obie aplikacje znajdują się nawzajem w sieci lokalnej i komunikują się bezpośrednio. Bez zakładania konta, bez serwera pośrodku i bez wysyłania czegokolwiek do internetu.
@@ -1357,6 +1423,9 @@ DET HÄR KAN DU GÖRA
 • Flytta widgeten genom att dra den på en miniatyr av din Macs skärmlayout. Täcker den en bild flyttar du undan den utan att röra din Mac. Med en extra skärm drar du över den till den andra.
 • Dölja widgeten för publiken, hämta tillbaka en försvunnen widget bredvid panelen eller radera timern
 
+APPLE WATCH
+När du presenterar finns det ingen tid att titta på en skärm. Apple Watch visar återstående tid med stora siffror och knackar på handleden vid 5 minuter, vid 1 minut och när tiden är slut. Starta eller pausa med uppspelningsknappen och vrid Digital Crown ett snäpp för att lägga till eller dra bort 30 sekunder. På modeller som stöder det fungerar också dubbeltryck, och med Genvägar kan du lägga det på åtgärdsknappen på Apple Watch Ultra. Lägg till komplikationen på urtavlan så ser du återstående tid bara du lyfter handleden. Klockan når din Mac via den här fjärrkontrollen på iPhone, så håll fjärrkontrollen öppen på iPhone när du vill styra timern. Låses iPhone fortsätter klockan själv att räkna ner och vibrera.
+
 SÅ ANSLUTER DEN
 De två apparna hittar varandra i ditt lokala nätverk och pratar direkt med varandra. Inget konto, ingen server emellan och inget skickas över internet.
 
@@ -1416,6 +1485,9 @@ NELER YAPABİLİRSİNİZ
 • Widget boyutunu S, M veya L yaparak en arka sıradan da okunmasını sağlayın
 • Widget’ı, Mac’inizin ekran düzeninin küçük bir kopyası üzerinde sürükleyerek taşıyın. Bir slaydı kapatıyorsa Mac’e dokunmadan kenara çekin. İkinci bir ekran varsa diğer ekrana sürükleyin.
 • Widget’ı izleyicilerden gizleyin, kaybolan bir widget’ı panelin yanına geri çağırın ya da zamanlayıcıyı silin
+
+APPLE WATCH
+Sunum sırasında ekrana bakacak vaktiniz olmaz. Apple Watch kalan süreyi büyük rakamlarla gösterir ve 5 dakika, 1 dakika kala ve süre dolunca bileğinize dokunarak haber verir. Oynat düğmesiyle başlatın ya da duraklatın, Digital Crown’u bir tık çevirerek 30 saniye ekleyin veya çıkarın. Desteklenen modellerde çift dokunmayla da başlatıp duraklatabilir, Kestirmeler ile bunu Apple Watch Ultra’nın Eylem düğmesine atayabilirsiniz. Komplikasyonu saat kadranına ekleyin, bileğinizi kaldırmanız kalan süreyi görmenize yeter. Saat, Mac’e bu iPhone kumandası üzerinden ulaşır; bu yüzden zamanlayıcıyı yönetmek için kumandayı iPhone’da açık tutun. iPhone kilitlense de saat geri saymayı ve titreşimi kendi başına sürdürür.
 
 NASIL BAĞLANIR
 İki uygulama yerel ağınızda birbirini bulur ve doğrudan iletişim kurar. Hesap açmanız gerekmez, arada sunucu yoktur ve internete hiçbir şey gönderilmez.
