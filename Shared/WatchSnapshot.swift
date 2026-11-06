@@ -62,6 +62,9 @@ struct WatchSnapshot: Codable, Equatable, Sendable {
     /// 끊겨도 `timer` 는 마지막 값 그대로 둔다. Mac 의 타이머는 그대로 돌고 있으니 손목은 계속 센다.
     var connected: Bool
     var timer: WatchTimer?
+    /// iPhone 리모컨에 Pro 가 없어 손목에 타이머를 보내지 않는다. 그때 `timer` 는 nil.
+    /// 옵셔널이라 이 필드를 모르는 옛 장도 그대로 읽힌다.
+    var locked: Bool? = nil
 
     static let key = "snapshot"
 

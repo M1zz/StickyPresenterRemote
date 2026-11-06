@@ -106,3 +106,37 @@
 /* 앞으로 만들 기능(로드맵) */
 "Apple Watch" = "Apple Watch";
 "발표 중 남은 시간을 손목 진동으로 알려 주고, 손목에서 시작·일시정지와 30초 조정을 해요." = "Cổ tay rung khi sắp hết giờ, và bạn có thể bắt đầu, tạm dừng hoặc chỉnh từng 30 giây ngay trên đồng hồ.";
+
+/* Pro · 페이월 · 잠금 · 테마 */
+"발표를 넘기는 조작은 언제나 무료예요. 타이머 창을 꾸미고 옮기고, 손목으로 남은 시간을 받고 싶을 때 Pro를 고르세요." = "Điều khiển bài thuyết trình luôn miễn phí. Hãy chọn Pro khi bạn muốn tùy chỉnh, di chuyển cửa sổ hẹn giờ và cảm nhận thời gian còn lại trên cổ tay.";
+"무료" = "Miễn phí";
+"연결 · 시작 · 멈춤 · 30초 조정 · 초기화" = "Kết nối · Bắt đầu · Tạm dừng · ±30 giây · Đặt lại";
+"새 타이머 · Siri · 단축어" = "Hẹn giờ mới · Siri · Phím tắt";
+"감추기 · 정렬 · 지우기" = "Ẩn · Căn chỉnh · Xóa";
+"타이머 창 크기 · 테마" = "Kích thước và chủ đề cửa sổ hẹn giờ";
+"끌어서 옮기기 · 다른 화면으로" = "Kéo để di chuyển · Màn hình khác";
+"Apple Watch 남은 시간 · 손목 진동" = "Thời gian còn lại trên Apple Watch · Rung ở cổ tay";
+"무료로 쓸 수 있어요" = "Dùng miễn phí";
+"Pro에서 열려요" = "Mở bằng Pro";
+"월 구독" = "Hằng tháng";
+"주 구독" = "Hằng tuần";
+"%@ / 월" = "%@ / tháng";
+"%@ / 주" = "%@ / tuần";
+"상품을 불러오지 못했어요." = "Không thể tải các gói.";
+"다시 시도" = "Thử lại";
+"다른 기간 보기" = "Gói khác";
+"Pro 열기" = "Nâng cấp Pro";
+"구매 복원" = "Khôi phục giao dịch mua";
+"결제는 App Store 계정으로 청구됩니다. 구독은 언제든지 App Store 설정에서 관리·해지할 수 있어요." = "Khoản thanh toán được tính vào tài khoản App Store của bạn. Bạn có thể quản lý hoặc hủy gói đăng ký bất cứ lúc nào trong cài đặt App Store.";
+"이용약관" = "Điều khoản sử dụng";
+"개인정보처리방침" = "Chính sách quyền riêng tư";
+"닫기" = "Đóng";
+"테마 바꾸기" = "Đổi chủ đề";
+"밝게" = "Sáng";
+"어둡게" = "Tối";
+"카멜레온" = "Tắc kè hoa";
+"시스템" = "Hệ thống";
+"Pro 사용 중" = "Bạn đang dùng Pro";
+"Pro 둘러보기" = "Xem Pro";
+"Mac과 함께 열기" = "Mở cùng với Mac";
+"Mac의 StickyPresenter에서 연 Pro가 리모컨에도 그대로 열려요. 한 번만 고르면 돼요." = "Pro bạn mở trong StickyPresenter trên Mac cũng sẽ mở cả điều khiển. Chỉ cần chọn một lần.";

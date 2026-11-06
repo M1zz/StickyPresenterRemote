@@ -7,15 +7,23 @@ import LeeoKit
 
 struct RemoteSettingsView: View {
     @Environment(\.dismiss) private var dismiss
+    @ObservedObject private var pro = RemotePro.shared
+    @State private var showsPaywall = false
+    @State private var showsGraduation = false
+    @State private var showsManage = false
     let onShowIntro: () -> Void
 
     var body: some View {
         NavigationStack {
             List {
-                // 리모컨을 자주 연 사람에게만 드물게 응원을 부탁한다 — 발표 중 화면이 아니라 설정에서.
-                LeeoTipAskSlot<RemoteSpec>(tipJar: RemoteSpec.tipJar, reached: RemoteTipMoments.reachedNow)
-                    .listRowInsets(EdgeInsets())
-                    .listRowBackground(Color.clear)
+                // 응원 부탁은 이미 Pro 를 가진 사람에게만, 리모컨을 자주 연 뒤 드물게 — 발표 중 화면이 아니라 설정에서.
+                if pro.hasPro {
+                    LeeoTipAskSlot<RemoteSpec>(tipJar: RemoteSpec.tipJar, reached: RemoteTipMoments.reachedNow)
+                        .listRowInsets(EdgeInsets())
+                        .listRowBackground(Color.clear)
+                }
+
+                proSection
 
                 Section("도움말") {
                     Button {
@@ -54,6 +62,15 @@ struct RemoteSettingsView: View {
                     LabeledContent("버전", value: Self.versionString)
                 }
             }
+            .sheet(isPresented: $showsPaywall) { RemotePaywallView() }
+            .sheet(isPresented: $showsGraduation) {
+                // 졸업가가 아직 스토어에 없으면 평생을 그대로 판다.
+                LeeoGraduationOfferView(graduate: pro.product(RemoteProducts.graduate)
+                                                  ?? pro.product(RemoteProducts.lifetime)) {
+                    await pro.didPurchase()
+                }
+            }
+            .manageSubscriptionsSheet(isPresented: $showsManage)
             .navigationTitle("설정")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
@@ -61,6 +78,30 @@ struct RemoteSettingsView: View {
                     Button { dismiss() } label: { Label("완료", systemImage: "checkmark") }
                 }
             }
+        }
+    }
+
+    // MARK: Pro
+
+    @ViewBuilder
+    private var proSection: some View {
+        Section {
+            if pro.hasPro {
+                Label("Pro 사용 중", systemImage: "checkmark.seal.fill")
+                if pro.subscription != nil {
+                    Button(LeeoLadderText.manageSubscription) { showsManage = true }
+                    // 구독 중이면 언제든 평생으로 옮겨 갈 길을 둔다.
+                    Button(LeeoLadderText.switchToLifetimeEntry) { showsGraduation = true }
+                }
+            } else {
+                Button { showsPaywall = true } label: {
+                    Label("Pro 둘러보기", systemImage: "sparkles")
+                }
+                Button("구매 복원") { Task { await pro.store.restore(); await pro.didPurchase() } }
+                    .disabled(pro.store.isRestoring)
+            }
+        } header: {
+            Text(verbatim: "Pro")
         }
     }
 

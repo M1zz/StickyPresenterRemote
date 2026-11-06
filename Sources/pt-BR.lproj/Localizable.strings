@@ -106,3 +106,37 @@
 /* 앞으로 만들 기능(로드맵) */
 "Apple Watch" = "Apple Watch";
 "발표 중 남은 시간을 손목 진동으로 알려 주고, 손목에서 시작·일시정지와 30초 조정을 해요." = "O pulso vibra quando o tempo está acabando, e você pode iniciar, pausar ou ajustar de 30 em 30 segundos direto no relógio.";
+
+/* Pro · 페이월 · 잠금 · 테마 */
+"발표를 넘기는 조작은 언제나 무료예요. 타이머 창을 꾸미고 옮기고, 손목으로 남은 시간을 받고 싶을 때 Pro를 고르세요." = "Avançar pela apresentação é sempre grátis. Escolha o Pro quando quiser personalizar e mover a janela do timer e sentir o tempo restante no pulso.";
+"무료" = "Grátis";
+"연결 · 시작 · 멈춤 · 30초 조정 · 초기화" = "Conectar · Iniciar · Pausar · ±30 segundos · Redefinir";
+"새 타이머 · Siri · 단축어" = "Novos timers · Siri · Atalhos";
+"감추기 · 정렬 · 지우기" = "Ocultar · Alinhar · Excluir";
+"타이머 창 크기 · 테마" = "Tamanho e tema da janela do timer";
+"끌어서 옮기기 · 다른 화면으로" = "Arrastar para mover · Outras telas";
+"Apple Watch 남은 시간 · 손목 진동" = "Tempo restante no Apple Watch · Vibração no pulso";
+"무료로 쓸 수 있어요" = "Grátis";
+"Pro에서 열려요" = "Liberado no Pro";
+"월 구독" = "Mensal";
+"주 구독" = "Semanal";
+"%@ / 월" = "%@ / mês";
+"%@ / 주" = "%@ / semana";
+"상품을 불러오지 못했어요." = "Não foi possível carregar os planos.";
+"다시 시도" = "Tentar de novo";
+"다른 기간 보기" = "Mais planos";
+"Pro 열기" = "Assinar o Pro";
+"구매 복원" = "Restaurar compras";
+"결제는 App Store 계정으로 청구됩니다. 구독은 언제든지 App Store 설정에서 관리·해지할 수 있어요." = "O pagamento é cobrado na sua conta da App Store. Você pode gerenciar ou cancelar a assinatura a qualquer momento nos ajustes da App Store.";
+"이용약관" = "Termos de uso";
+"개인정보처리방침" = "Política de privacidade";
+"닫기" = "Fechar";
+"테마 바꾸기" = "Mudar tema";
+"밝게" = "Claro";
+"어둡게" = "Escuro";
+"카멜레온" = "Camaleão";
+"시스템" = "Sistema";
+"Pro 사용 중" = "Você tem o Pro";
+"Pro 둘러보기" = "Conhecer o Pro";
+"Mac과 함께 열기" = "Liberar junto com o Mac";
+"Mac의 StickyPresenter에서 연 Pro가 리모컨에도 그대로 열려요. 한 번만 고르면 돼요." = "O Pro liberado no StickyPresenter do Mac também vai liberar o controle. Você escolhe uma vez só.";

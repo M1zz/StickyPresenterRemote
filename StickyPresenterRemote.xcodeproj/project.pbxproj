@@ -26,6 +26,7 @@
 		74B0EA3F7148465940B3A5DB /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = B3657998736A2B6539D5CC66 /* Localizable.strings */; };
 		7BA01B7E3EC264C43A1D214F /* RemoteClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E63ACA9C91C08DE2F60D7A /* RemoteClient.swift */; };
 		7BD3A7E9B710AA02E9069D4D /* RemoteProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71164E2E48251299244D654E /* RemoteProtocolTests.swift */; };
+		89256DF01077656656DFA199 /* RemotePro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25597B40311655C3E9C5ACC4 /* RemotePro.swift */; };
 		8A75839F453BCEC9CCF6C3AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A33A3FC5F8ED9CE541B90283 /* Assets.xcassets */; };
 		93BD4E05FE9DEF02262F5731 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */; };
 		94250A6CF4116A0082639AE5 /* WatchDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B783F467929E3F880F8598D /* WatchDemo.swift */; };
@@ -34,6 +35,7 @@
 		A82616AAC4B7AF7C3BB68485 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98EC599B60B22CA04D848AA6 /* Localizable.strings */; };
 		B276F01F8BABB8849CF69171 /* AppShortcuts.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4953DD735451EB602F8C7C16 /* AppShortcuts.strings */; };
 		B49F4BE36D2E549331EB3A55 /* WatchLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06CE17928B11C3EEA8AFD59B /* WatchLink.swift */; };
+		C29D81380172F475003E9E0B /* RemotePaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8713B2EB483E4BE99B945BF /* RemotePaywallView.swift */; };
 		C37109C733169D440EDEE771 /* PendingCommands.swift in Sources */ = {isa = PBXBuildFile; fileRef = B405F348627AA4B63F0643EA /* PendingCommands.swift */; };
 		C3DEB0D404BC1A4143F7C058 /* RemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */; };
 		CF1A60E17E6195AB324E886E /* RemoteWatchApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253ED5075102DCCF6280DFD /* RemoteWatchApp.swift */; };
@@ -104,6 +106,7 @@
 		1931FDF653B750EBB74A85FD /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		1DAA2DFBE89CB62E6EEECA4F /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		22D5420A1EB38ED624DA6427 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		25597B40311655C3E9C5ACC4 /* RemotePro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePro.swift; sourceTree = "<group>"; };
 		258EBAE723289206D1208415 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/Localizable.strings; sourceTree = "<group>"; };
 		2942AF482CD58ECA0A8D0AD1 /* id */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = id; path = id.lproj/Localizable.strings; sourceTree = "<group>"; };
 		29B597BF49361CE820AF189F /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -234,6 +237,7 @@
 		F1CCA9CA582E179B4159BC84 /* it */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = it; path = it.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		F3967536EEFEBA04D5F277E3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/AppShortcuts.strings; sourceTree = "<group>"; };
 		F84A102D8879DB8724FB82C6 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AppShortcuts.strings"; sourceTree = "<group>"; };
+		F8713B2EB483E4BE99B945BF /* RemotePaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemotePaywallView.swift; sourceTree = "<group>"; };
 		FBFC8C94F205680BC4F46AE4 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AppShortcuts.strings"; sourceTree = "<group>"; };
 		FE6C1EC4058A6DCF02382BCE /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FEB6A60FAD07DAC410981C38 /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 				AFCF09A7AEFAD8E25CE0980C /* RemoteApp.swift */,
 				80E63ACA9C91C08DE2F60D7A /* RemoteClient.swift */,
 				DFD392207E8145849F24F519 /* RemoteOnboardingView.swift */,
+				F8713B2EB483E4BE99B945BF /* RemotePaywallView.swift */,
+				25597B40311655C3E9C5ACC4 /* RemotePro.swift */,
 				4B6AAF7A3EC67A8CC4ABB7F9 /* RemoteProtocol.swift */,
 				D95BE6593C8EFC65AD672D5C /* RemoteSettingsView.swift */,
 				07EC8BC453356805648721C7 /* RemoteShortcuts.swift */,
@@ -544,6 +550,8 @@
 				506154922BACDBC8228173B5 /* RemoteApp.swift in Sources */,
 				7BA01B7E3EC264C43A1D214F /* RemoteClient.swift in Sources */,
 				157CABBB6EFBC831B38787C6 /* RemoteOnboardingView.swift in Sources */,
+				C29D81380172F475003E9E0B /* RemotePaywallView.swift in Sources */,
+				89256DF01077656656DFA199 /* RemotePro.swift in Sources */,
 				C3DEB0D404BC1A4143F7C058 /* RemoteProtocol.swift in Sources */,
 				A2A056540578E7F6380CAC40 /* RemoteSettingsView.swift in Sources */,
 				42A175D7F46F1A95CFD69653 /* RemoteShortcuts.swift in Sources */,

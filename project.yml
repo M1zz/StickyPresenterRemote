@@ -158,6 +158,8 @@ schemes:
         StickyPresenterRemote: all
     run:
       config: Debug
+      # 시뮬레이터에서 Pro · 팁 구매 흐름을 시험한다 (App Store Connect 상품과 같은 ID).
+      storeKitConfiguration: Config/RemoteProducts.storekit
     test:
       config: Debug
       targets:

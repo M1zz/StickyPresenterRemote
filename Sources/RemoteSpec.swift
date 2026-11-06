@@ -14,15 +14,23 @@ enum RemoteSpec: LeeoAppSpec {
     static let legal = LeeoLegalConfig(
         privacyURL: URL(string: "https://m1zz.github.io/StickyPresenter/remote-privacy.html")!,
         supportURL: URL(string: "https://m1zz.github.io/StickyPresenter/remote.html")!)
-    static let monetization = LeeoMonetization.free
-    static let appStoreID: String? = "6803358945"
-    /// 개발자 응원하기(팁, 소모성 세 가지 — 작은 것부터). 기능을 열지 않는다.
-    /// 무료 앱이라 LeeoStore 가 없다 — 앱이 뜰 때 `startStandalone()` 으로 혼자 선다.
-    @MainActor static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
-        "com.leeo.StickyPresenter.Remote.tip.small",
-        "com.leeo.StickyPresenter.Remote.tip.medium",
-        "com.leeo.StickyPresenter.Remote.tip.large"
-    ]))
+    /// 무료 · Pro 두 칸. 발표를 넘기는 조작은 무료, 꾸미고 옮기고 손목으로 받는 것이 Pro (→ RemotePro.swift).
+    /// 판정은 `RemotePro.allows` 가 한다 — 상품을 불러온 적 없는 기기는 잠그지 않는다.
+    static let monetization = LeeoMonetization.freemiumSubscription(
+        LeeoSubscriptionConfig(
+            productIDs: RemoteProducts.all,
+            // 자체 약관이 없으므로 애플 표준 사용권 계약(EULA)을 건다. 구독을 파는 앱의 심사 필수 항목이다.
+            termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!,
+            gate: LeeoGatePolicy(proOnly: Set(RemoteProFeature.allCases.map(\.rawValue))),
+            // 개발자 응원하기(팁, 소모성 세 가지 — 작은 것부터). 기능을 열지 않는다.
+            // ⚠️ productIDs 에 넣지 않는다 — 넣으면 팁을 낸 사람이 Pro 가 된다.
+            tipJar: LeeoTipJarConfig(productIDs: [
+                "com.leeo.StickyPresenter.Remote.tip.small",
+                "com.leeo.StickyPresenter.Remote.tip.medium",
+                "com.leeo.StickyPresenter.Remote.tip.large"
+            ])))
+    /// 팁 엔진은 Pro 스토어가 함께 들고 있다(결제 리스너가 하나여야 팁이 두 번 끝나지 않는다).
+    @MainActor static var tipJar: LeeoTipJar { RemotePro.shared.store.tipJar! }
     // 익명 사용 통계 → FeedbackHub. 없으면 bootstrap 이 스냅샷·app_open 을 건너뛴다.
     static let analytics: any LeeoAnalytics = LeeoUsageAnalytics(spec: RemoteSpec.self)
 
@@ -38,6 +46,10 @@ enum RemoteSpec: LeeoAppSpec {
         .init(id: "watch", status: .shipped("1.1.0"),
               title: String(localized: "Apple Watch"),
               detail: String(localized: "발표 중 남은 시간을 손목 진동으로 알려 주고, 손목에서 시작·일시정지와 30초 조정을 해요.")),
+        // 같은 Apple 계정이면 Mac 본체에서 연 Pro 가 리모컨에도 열리게. 두 앱이 함께 바꿀 일이라 다음으로 미뤘다.
+        .init(id: "host-pro", status: .planned,
+              title: String(localized: "Mac과 함께 열기"),
+              detail: String(localized: "Mac의 StickyPresenter에서 연 Pro가 리모컨에도 그대로 열려요. 한 번만 고르면 돼요.")),
     ]}
 }
 

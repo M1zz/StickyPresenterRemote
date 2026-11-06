@@ -99,10 +99,12 @@ struct RemoteWatchView: View {
 
     private var waiting: some View {
         VStack(spacing: 8) {
-            Image(systemName: "timer")
+            let locked = link.snapshot?.locked == true
+            Image(systemName: locked ? "lock.fill" : "timer")
                 .font(.title)
                 .foregroundStyle(WatchTheme.accent)
-            Text("iPhone 리모컨이 Mac에 연결되면 남은 시간이 여기 보여요")
+            Text(locked ? LocalizedStringKey("iPhone 리모컨에서 Pro를 열면 손목에서 남은 시간을 볼 수 있어요")
+                        : LocalizedStringKey("iPhone 리모컨이 Mac에 연결되면 남은 시간이 여기 보여요"))
                 .font(.footnote)
                 .multilineTextAlignment(.center)
                 .foregroundStyle(.secondary)

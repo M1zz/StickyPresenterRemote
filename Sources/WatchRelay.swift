@@ -18,6 +18,7 @@ final class WatchRelay: NSObject {
 
     private weak var client: RemoteClient?
     private var subscription: AnyCancellable?
+    private var proSubscription: AnyCancellable?
     /// 지금 워치에 보여 주는 타이머. 여러 개가 돌아도 손목의 타이머가 1초마다 바뀌지 않게 붙잡는다.
     private var shownID: UUID?
     private var lastTimer: WatchTimer?
@@ -34,13 +35,26 @@ final class WatchRelay: NSObject {
         subscription = client.$status.combineLatest(client.$timers)
             .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
             .sink { [weak self] _, timers in self?.publish(timers) }
+        // Pro 를 사거나 구독이 끝나면 손목도 곧바로 따라간다.
+        proSubscription = RemotePro.shared.objectWillChange
+            .debounce(for: .milliseconds(300), scheduler: RunLoop.main)
+            .sink { [weak self] _ in self?.resend() }
     }
+
+    /// Apple Watch 는 Pro 에서 열린다. 잠겨 있으면 타이머 없이 '잠김' 한 장만 보낸다.
+    private var watchAllowed: Bool { RemotePro.shared.allows(.watch) }
 
     // MARK: 보내기
 
     private func publish(_ timers: [RemoteTimer]) {
         guard let client else { return }
         let connected = client.isConnected
+        guard watchAllowed else {
+            lastTimer = nil
+            shownID = nil
+            send(WatchSnapshot(host: nil, connected: connected, timer: nil, locked: true))
+            return
+        }
         if connected {
             lastTimer = pick(timers).map(Self.watchTimer)
             shownID = lastTimer?.id
@@ -65,7 +79,7 @@ final class WatchRelay: NSObject {
 
     /// 손목 쪽에서 보면 같은 장인가 — 1초마다 오는 남은 시간의 흔들림(1초 안쪽)은 같다고 본다.
     private static func sameMoment(_ a: WatchSnapshot, _ b: WatchSnapshot) -> Bool {
-        guard a.host == b.host, a.connected == b.connected else { return false }
+        guard a.host == b.host, a.connected == b.connected, a.locked == b.locked else { return false }
         switch (a.timer, b.timer) {
         case (nil, nil): return true
         case let (x?, y?):
@@ -104,7 +118,7 @@ final class WatchRelay: NSObject {
     /// 워치의 버튼 하나를 Mac 명령으로. Mac 에 붙어 있지 않으면 보내지 않고 "못 했다" 고 답한다 —
     /// 나중에 붙었을 때 지난 명령이 뒤늦게 타이머를 멈추면 발표 중에 더 곤란하다.
     fileprivate func handle(_ message: [String: Any]) -> Bool {
-        guard let client, client.isConnected,
+        guard let client, client.isConnected, watchAllowed,
               let raw = message[WatchCommand.key] as? String, let command = WatchCommand(rawValue: raw),
               let idString = message[WatchCommand.timerKey] as? String, let id = UUID(uuidString: idString),
               client.timers.contains(where: { $0.id == id }) else { return false }

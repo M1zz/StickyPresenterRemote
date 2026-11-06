@@ -32,8 +32,8 @@ struct StickyPresenterRemoteApp: App {
         WindowGroup {
             RemoteRootView()
                 .environmentObject(client)
-                // 개발자 응원하기(팁) — 상품을 불러오고, 끝나지 않은 팁을 마저 센다.
-                .task { await RemoteSpec.tipJar.startStandalone() }
+                // Pro 권한 · 상품. 팁도 같은 스토어가 불러오고, 끝나지 않은 팁을 마저 센다.
+                .task { await RemotePro.shared.refresh() }
                 // Apple Watch 와 잇는다 — 워치의 남은 시간 · 진동 · 버튼이 이 리모컨을 거쳐 Mac 에 닿는다.
                 .task { WatchRelay.shared.start(with: client) }
                 // 첫 실행에는 안내를 마친 뒤에 찾기를 시작한다 — 로컬 네트워크 허용 질문이
@@ -43,7 +43,9 @@ struct StickyPresenterRemoteApp: App {
                     // 백그라운드에서 세션을 붙들고 있으면 iOS 가 곧 끊어버리고,
                     // 복귀했을 때 죽은 세션으로 계속 시도하게 된다. 깨끗이 끊고 다시 찾는다.
                     switch phase {
-                    case .active:     if hasSeenOnboarding { client.start() }
+                    case .active:
+                        if hasSeenOnboarding { client.start() }
+                        Task { await RemotePro.shared.refresh() }
                     case .background: client.stop()
                     default:          break
                     }
@@ -71,6 +73,9 @@ struct StickyPresenterRemoteApp: App {
 struct RemoteRootView: View {
     @EnvironmentObject private var client: RemoteClient
     @ObservedObject private var inbox = RemoteIntentInbox.shared
+    @ObservedObject private var pro = RemotePro.shared
+    /// 구독 중인 사람에게 6개월째와 갱신 7일 전에 한 번씩 서는 '구독 졸업' 평생가 (→ LeeoGraduation).
+    @State private var showsGraduation = false
     @AppStorage(RemoteOnboardingView.seenKey) private var hasSeenOnboarding = false
     @State private var showSettings = false
     @Environment(\.foldLayout) private var fold
@@ -103,11 +108,30 @@ struct RemoteRootView: View {
                 hasSeenOnboarding = false
             })
         }
+        // 잠긴 조작을 누르면 그 조작을 짚은 페이월이 선다. 발표를 넘기는 조작은 잠그지 않는다.
+        .sheet(item: $pro.paywall) { RemotePaywallView(feature: $0) }
+        .sheet(isPresented: $showsGraduation) {
+            LeeoGraduationOfferView(graduate: pro.product(RemoteProducts.graduate)) {
+                await pro.didPurchase()
+            }
+        }
+        // 발표 중에는 띄우지 않는다 — Mac 과 떨어져 있을 때만.
+        .onChange(of: pro.graduationIsDue) { _, due in offerGraduationIfDue(due) }
+        .onAppear { offerGraduationIfDue(pro.graduationIsDue) }
         // 조건이 맞으면(몇 번 써 보고 타이머를 시작해 본 뒤) 한 번 "즐겁게 쓰고 계신가요?" 를 묻는다.
         .leeoSatisfactionCheck(RemoteSpec.self)
         // 단축어로 맡겨 둔 명령은 Mac 과 붙는 순간 보낸다.
-        .onChange(of: client.isConnected) { _, _ in flushPendingCommands() }
+        .onChange(of: client.isConnected) { _, _ in
+            flushPendingCommands()
+            offerGraduationIfDue(pro.graduationIsDue)
+        }
         .onChange(of: inbox.queue.isEmpty) { _, _ in flushPendingCommands() }
+    }
+
+    private func offerGraduationIfDue(_ due: Bool) {
+        guard due, !client.isConnected, !showsGraduation, !showSettings else { return }
+        LeeoGraduation.markOffered()
+        showsGraduation = true
     }
 
     private func flushPendingCommands() {
@@ -702,6 +726,7 @@ struct TimerRemoteRow: View {
     }
 
     @EnvironmentObject private var client: RemoteClient
+    @ObservedObject private var pro = RemotePro.shared
     let timer: RemoteTimer
     var role: Role = .full
     var showsMoveTip = false
@@ -828,14 +853,37 @@ struct TimerRemoteRow: View {
     // MARK: 창 크기
 
     private var sizePicker: some View {
-        // 세그먼트 컨트롤이라 버튼 세 개를 나란히 두는 것보다 폭을 적게 먹고
-        // 현재 선택도 한눈에 보인다.
-        Picker("창 크기", selection: sizeBinding) {
-            Text("S").tag("S")
-            Text("M").tag("M")
-            Text("L").tag("L")
+        HStack(spacing: 10) {
+            // 세그먼트 컨트롤이라 버튼 세 개를 나란히 두는 것보다 폭을 적게 먹고
+            // 현재 선택도 한눈에 보인다.
+            Picker("창 크기", selection: sizeBinding) {
+                Text("S").tag("S")
+                Text("M").tag("M")
+                Text("L").tag("L")
+            }
+            .pickerStyle(.segmented)
+
+            // 누를 때마다 다음 테마로. 본체가 열지 않은 테마(카멜레온)는 Mac 이 건너뛴다.
+            Button {
+                client.send(.cycleTheme(timer.id))
+            } label: {
+                Image(systemName: "paintpalette")
+                    .frame(width: 44, height: 24)
+            }
+            .buttonStyle(.bordered)
+            .accessibilityLabel("테마 바꾸기")
+            .accessibilityValue(themeName)
         }
-        .pickerStyle(.segmented)
+        .proLocked(.appearance)
+    }
+
+    private var themeName: String {
+        switch timer.theme {
+        case "light":     String(localized: "밝게")
+        case "dark":      String(localized: "어둡게")
+        case "chameleon": String(localized: "카멜레온")
+        default:          String(localized: "시스템")
+        }
     }
 
     /// 선택 즉시 Mac 으로 명령을 보낸다. 실제 값은 다음 상태 갱신 때 되돌아온다.
@@ -857,7 +905,9 @@ struct TimerRemoteRow: View {
             client.send(.moveWidget(timer.id, x: x, y: y))
             MoveWidgetTip.hasMovedWidget = true
         }
-        if showsMoveTip {
+        if !pro.allows(.position) {
+            pad.proLocked(.position)
+        } else if showsMoveTip {
             pad.popoverTip(MoveWidgetTip(), arrowEdge: .bottom)
         } else {
             pad
@@ -908,6 +958,44 @@ struct TimerRemoteRow: View {
         return h > 0 ? String(format: "%d:%02d:%02d", h, m, s)
                      : String(format: "%02d:%02d", m, s)
     }
+}
+
+// MARK: - Pro 잠금
+
+private struct ProLock: ViewModifier {
+    let feature: RemoteProFeature
+    @ObservedObject private var pro = RemotePro.shared
+
+    init(_ feature: RemoteProFeature) { self.feature = feature }
+
+    func body(content: Content) -> some View {
+        if pro.allows(feature) {
+            content
+        } else {
+            // 무엇이 잠겼는지 보이게 흐리게 두고, 위에 안내 한 줄. 누르면 그 조작을 짚은 페이월.
+            content
+                .opacity(0.35)
+                .allowsHitTesting(false)
+                .accessibilityHidden(true)
+                .overlay {
+                    Button { pro.paywall = feature } label: {
+                        Label("Pro에서 열려요", systemImage: "lock.fill")
+                            .font(.body.weight(.semibold))
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 6)
+                            .background(.regularMaterial, in: Capsule())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(feature.title)
+                    .accessibilityHint(String(localized: "Pro에서 열려요"))
+                }
+        }
+    }
+}
+
+extension View {
+    /// Pro 가 아니면 흐리게 잠그고 "Pro에서 열려요" 한 줄을 얹는다.
+    func proLocked(_ feature: RemoteProFeature) -> some View { modifier(ProLock(feature)) }
 }
 
 // MARK: - Widget Position Pad
