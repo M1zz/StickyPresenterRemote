@@ -14,6 +14,9 @@ import StoreKit
 //
 // ⚠️ 스토어에서 Pro 상품을 **한 번도** 불러온 적이 없는 기기는 잠그지 않는다(`allows`).
 //    App Store Connect 에 상품을 만들기 전에 빌드가 나가도, 살 수 없는데 막히는 사람이 없게.
+//
+// ⚠️ 페이월 전부터 쓰던 사람은 Pro 평생이다(`RemoteLegacy`). 1.1.0 까지 Apple Watch · 위치 판 ·
+//    크기 조절은 무료였다. 이미 쓰던 것을 빼앗아 팔지 않는다.
 
 /// Pro 에서 열리는 것. 페이월 비교표와 잠금 안내가 이 목록 하나를 읽는다.
 enum RemoteProFeature: String, CaseIterable, Identifiable {
@@ -87,7 +90,7 @@ final class RemotePro: ObservableObject {
         guard let config = RemoteSpec.paywall else {
             preconditionFailure("RemoteSpec.monetization 에 페이월이 없다")
         }
-        store = LeeoStore(config: config)
+        store = LeeoStore(config: config, grandfather: { await RemoteLegacy.isLegacyInstall() })
         hasSeenProducts = UserDefaults.standard.bool(forKey: Self.seenKey)
         // 스토어의 변화(구매 · 환불 · 만료 · 상품 도착)를 이 객체를 보는 화면에 그대로 흘린다.
         observation = store.objectWillChange.sink { [weak self] _ in
@@ -134,5 +137,45 @@ final class RemotePro: ObservableObject {
         guard !hasSeenProducts, !store.products.isEmpty else { return }
         hasSeenProducts = true
         UserDefaults.standard.set(true, forKey: Self.seenKey)
+    }
+}
+
+// MARK: - 먼저 써 준 사람
+
+/// 페이월이 생기기 전에 이 앱을 쓰던 사람인가. 맞으면 Pro 평생이다(`LeeoStore` 의 grandfather).
+enum RemoteLegacy {
+    /// 페이월 없는 마지막 출시 빌드: 1.1.0 빌드 9.
+    /// 근거: 태그 deploy-StickyPresenterRemote-1.1.0-9 (커밋 fca42c7 "1.1.0 빌드 9 — DeployBar 배포분") 다음 커밋
+    /// 3a7ba80 에서 페이월이 들어왔다. 그 전 출시 빌드는 1.0 빌드 2 · 1.0.7 빌드 3 · 1.0.8 빌드 1 · 1.0.9~1.0.12 빌드 4~8 로
+    /// 모두 9 이하다. iOS 의 `originalAppVersion` 은 처음 받은 빌드의 CFBundleVersion(빌드 번호) 문자열이다.
+    /// ⚠️ 그래서 이제부터 빌드 번호는 9 이하로 되돌리면 안 된다 (Config/Version.xcconfig).
+    static let lastFreeBuild = 9
+
+    private static let checkedKey = "remote.legacy.checked"
+    private static let deviceKey = "remote.legacy.device"
+
+    /// 페이월이 생긴 빌드를 **처음 켤 때 한 번만**, 리모컨이 무엇이든 기기에 적기 전에 부른다.
+    /// 그때 이미 리모컨 기록(리모컨 ID · 짝 맺은 Mac · 첫 안내를 본 표시)이 있었으면 쓰던 사람이다.
+    /// 오프라인이라 영수증(`AppTransaction`)을 못 읽어도 쓰던 사람이 잠기지 않게 하는 두 번째 끈이다.
+    /// 리모컨 ID 는 1.0.8 부터 첫 실행마다 생겼으므로 그 뒤로 켜 본 기기는 모두 여기서 걸린다.
+    static func noteFirstLaunch() {
+        let defaults = UserDefaults.standard
+        guard !defaults.bool(forKey: checkedKey) else { return }
+        defaults.set(true, forKey: checkedKey)
+        let hadRecords = ["remote.remoteID", "remote.pairedHostID", "hasSeenOnboarding"]
+            .contains { defaults.object(forKey: $0) != nil }
+        if hadRecords { defaults.set(true, forKey: deviceKey) }
+    }
+
+    /// ① 이 기기에 페이월 전부터 리모컨 기록이 있었다 (`noteFirstLaunch`).
+    /// ② 이 Apple 계정이 `lastFreeBuild` 이하 빌드로 앱을 처음 받았다 — 새 기기에서도 이어진다.
+    /// ⚠️ 샌드박스 · TestFlight 의 `originalAppVersion` 은 늘 "1.0" 이라 출시 환경에서만 ②를 본다.
+    @MainActor
+    static func isLegacyInstall() async -> Bool {
+        if UserDefaults.standard.bool(forKey: deviceKey) { return true }
+        guard case .verified(let app)? = try? await AppTransaction.shared,
+              app.environment == .production,
+              let build = Int(app.originalAppVersion) else { return false }
+        return build <= lastFreeBuild
     }
 }
