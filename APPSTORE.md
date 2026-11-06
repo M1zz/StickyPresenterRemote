@@ -55,6 +55,11 @@ Mac을 찾지 못하면 흔한 원인을 체크리스트로 보여 줍니다.
 • 같은 Wi-Fi에서 StickyPresenter가 실행 중인 Mac
 • 두 기기 모두 로컬 네트워크 접근 허용
 
+구독 안내
+StickyPresenterRemote Pro 구독은 자동 갱신 구독입니다. 갱신일 24시간 전까지 해지하지 않으면 Apple 계정으로 자동 결제되며, 설정의 구독 관리에서 언제든 해지할 수 있습니다.
+이용약관(EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+개인정보처리방침: https://m1zz.github.io/StickyPresenter/ko/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/ko/remote.html
@@ -117,6 +122,11 @@ REQUIREMENTS
 • iPhone with iOS 17 or later
 • A Mac running StickyPresenter on the same Wi-Fi network
 • Local Network permission allowed on both devices
+
+Subscriptions
+StickyPresenterRemote Pro is an auto-renewing subscription. Payment is charged to your Apple Account, and the subscription renews unless canceled at least 24 hours before the current period ends. Manage or cancel anytime in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/StickyPresenter/en/remote-privacy.html
 
 ### 지원 URL
 
@@ -181,6 +191,11 @@ REQUIREMENTS
 • A Mac running StickyPresenter on the same Wi-Fi network
 • Local Network access allowed on both devices
 
+Subscriptions
+StickyPresenterRemote Pro is an auto-renewing subscription. Payment is charged to your Apple Account, and the subscription renews unless cancelled at least 24 hours before the current period ends. Manage or cancel any time in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/StickyPresenter/en/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/en/remote.html
@@ -243,6 +258,11 @@ Macが見つからないときは、よくある原因をチェックリスト�
 • iOS 17以降のiPhone
 • 同じWi-FiでStickyPresenterが起動しているMac
 • 両方のデバイスでローカルネットワークへのアクセスを許可
+
+サブスクリプションについて
+StickyPresenterRemote Pro は自動更新のサブスクリプションです。 期間終了の24時間前までに解約しない限り、Apple Account に自動で請求され更新されます。設定のサブスクリプション管理からいつでも解約できます。
+利用規約（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+プライバシーポリシー: https://m1zz.github.io/StickyPresenter/ja/remote-privacy.html
 
 ### 지원 URL
 
@@ -307,6 +327,11 @@ Apple Watch
 • 同一 Wi-Fi 下正在运行 StickyPresenter 的 Mac
 • 两台设备都允许访问本地网络
 
+订阅说明
+StickyPresenterRemote Pro 为自动续期订阅。 费用从你的 Apple 账户扣除，除非在当期结束前至少 24 小时取消，否则将自动续期。可随时在“设置”中管理或取消。
+使用条款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隐私政策: https://m1zz.github.io/StickyPresenter/zh-Hans/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/zh-Hans/remote.html
@@ -369,6 +394,11 @@ REQUISITOS
 • iPhone con iOS 17 o posterior
 • Un Mac con StickyPresenter abierto en la misma red Wi-Fi
 • Acceso a la red local permitido en ambos dispositivos
+
+Suscripciones
+La suscripción a StickyPresenterRemote Pro es de renovación automática. El cargo se realiza en tu cuenta de Apple y la suscripción se renueva salvo que la canceles al menos 24 horas antes de que termine el periodo. Puedes gestionarla o cancelarla cuando quieras en Ajustes.
+Términos de uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de privacidad: https://m1zz.github.io/StickyPresenter/es/remote-privacy.html
 
 ### 지원 URL
 
@@ -433,6 +463,11 @@ VORAUSSETZUNGEN
 • Ein Mac im selben WLAN, auf dem StickyPresenter läuft
 • Zugriff auf das lokale Netzwerk auf beiden Geräten erlaubt
 
+Abonnements
+StickyPresenterRemote Pro ist ein sich automatisch verlängerndes Abo. Die Zahlung erfolgt über deinen Apple Account. Das Abo verlängert sich, sofern du nicht mindestens 24 Stunden vor Ablauf des Zeitraums kündigst. Verwalten oder kündigen kannst du jederzeit in den Einstellungen.
+Nutzungsbedingungen (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Datenschutzerklärung: https://m1zz.github.io/StickyPresenter/de/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/de/remote.html
@@ -495,6 +530,11 @@ CONFIGURATION REQUISE
 • iPhone sous iOS 17 ou version ultérieure
 • Un Mac sur le même réseau Wi-Fi avec StickyPresenter ouvert
 • Accès au réseau local autorisé sur les deux appareils
+
+Abonnements
+L’abonnement StickyPresenterRemote Pro est à renouvellement automatique. Le paiement est débité sur votre compte Apple, et l’abonnement est reconduit sauf résiliation au moins 24 heures avant la fin de la période en cours. Gérez-le ou résiliez-le à tout moment dans Réglages.
+Conditions d’utilisation (EULA) : https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Politique de confidentialité : https://m1zz.github.io/StickyPresenter/fr/remote-privacy.html
 
 ### 지원 URL
 
@@ -559,6 +599,11 @@ REQUISITI
 • Un Mac sulla stessa rete Wi-Fi con StickyPresenter aperto
 • Accesso alla rete locale consentito su entrambi i dispositivi
 
+Abbonamenti
+L’abbonamento StickyPresenterRemote Pro si rinnova automaticamente. Il pagamento viene addebitato sul tuo Account Apple e l’abbonamento si rinnova se non lo disdici almeno 24 ore prima della fine del periodo. Puoi gestirlo o disdirlo in qualsiasi momento in Impostazioni.
+Condizioni d’uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Informativa sulla privacy: https://m1zz.github.io/StickyPresenter/it/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/it/remote.html
@@ -621,6 +666,11 @@ REQUISITOS
 • iPhone com iOS 17 ou posterior
 • Um Mac na mesma rede Wi-Fi com o StickyPresenter aberto
 • Acesso à rede local permitido nos dois dispositivos
+
+Assinaturas
+A assinatura StickyPresenterRemote Pro é renovada automaticamente. A cobrança é feita na sua Conta Apple, e a assinatura é renovada a menos que você cancele pelo menos 24 horas antes do fim do período. Gerencie ou cancele quando quiser em Ajustes.
+Termos de Uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de Privacidade: https://m1zz.github.io/StickyPresenter/pt-BR/remote-privacy.html
 
 ### 지원 URL
 
@@ -685,6 +735,11 @@ APPLE WATCH
 • Mac в той же сети Wi-Fi с запущенным StickyPresenter
 • Доступ к локальной сети разрешен на обоих устройствах
 
+Подписки
+StickyPresenterRemote Pro — подписка с автопродлением. Оплата списывается с вашего Аккаунта Apple, и подписка продлевается, если не отменить её минимум за 24 часа до конца периода. Управлять подпиской и отменить её можно в Настройках.
+Условия использования (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Политика конфиденциальности: https://m1zz.github.io/StickyPresenter/ru/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/ru/remote.html
@@ -747,6 +802,11 @@ Apple Watch
 • 執行 iOS 17 或以上版本的 iPhone
 • 在同一個 Wi-Fi 下執行 StickyPresenter 的 Mac
 • 兩台裝置都允許取用本地網路
+
+訂閱說明
+StickyPresenterRemote Pro 為自動續訂訂閱。 費用會從你的 Apple 帳號扣款，除非在當期結束前至少 24 小時取消，否則將自動續訂。可隨時在「設定」中管理或取消。
+使用條款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隱私權政策: https://m1zz.github.io/StickyPresenter/zh-Hant/remote-privacy.html
 
 ### 지원 URL
 
@@ -811,6 +871,11 @@ Apple Watch
 • Mac ที่เปิด StickyPresenter อยู่ใน Wi-Fi เดียวกัน
 • อนุญาตการเข้าถึงเครือข่ายภายในทั้งสองเครื่อง
 
+การสมัครสมาชิก
+StickyPresenterRemote Pro เป็นการสมัครสมาชิกที่ต่ออายุอัตโนมัติ ระบบจะเรียกเก็บเงินจากบัญชี Apple ของคุณและต่ออายุให้ เว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบ จัดการหรือยกเลิกได้ทุกเมื่อในการตั้งค่า
+ข้อกำหนดการใช้งาน (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+นโยบายความเป็นส่วนตัว: https://m1zz.github.io/StickyPresenter/th/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/th/remote.html
@@ -873,6 +938,11 @@ YÊU CẦU
 • iPhone chạy iOS 17 trở lên
 • Một máy Mac đang chạy StickyPresenter trong cùng mạng Wi-Fi
 • Cho phép truy cập mạng cục bộ trên cả hai thiết bị
+
+Gói đăng ký
+StickyPresenterRemote Pro là gói đăng ký tự động gia hạn. Phí được tính vào Tài khoản Apple của bạn và gói sẽ tự gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hạn kết thúc. Bạn có thể quản lý hoặc hủy bất cứ lúc nào trong Cài đặt.
+Điều khoản sử dụng (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách quyền riêng tư: https://m1zz.github.io/StickyPresenter/vi/remote-privacy.html
 
 ### 지원 URL
 
@@ -937,6 +1007,11 @@ POŽADAVKY
 • Mac ve stejné síti Wi-Fi se spuštěným StickyPresenterem
 • Povolený přístup k místní síti na obou zařízeních
 
+Předplatné
+StickyPresenterRemote Pro je automaticky obnovované předplatné. Platba se strhává z vašeho Apple účtu a předplatné se obnoví, pokud ho nezrušíte alespoň 24 hodin před koncem období. Spravovat nebo zrušit ho můžete kdykoli v Nastavení.
+Podmínky použití (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Zásady ochrany osobních údajů: https://m1zz.github.io/StickyPresenter/cs/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/cs/remote.html
@@ -999,6 +1074,11 @@ KRAV
 • iPhone med iOS 17 eller nyere
 • En Mac på samme Wi-Fi-netværk, der kører StickyPresenter
 • Adgang til lokalt netværk tilladt på begge enheder
+
+Abonnementer
+StickyPresenterRemote Pro er et abonnement, der fornyes automatisk. Betalingen trækkes på din Apple-konto, og abonnementet fornyes, medmindre du opsiger det mindst 24 timer før perioden slutter. Administrer eller opsig når som helst i Indstillinger.
+Brugsvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privatlivspolitik: https://m1zz.github.io/StickyPresenter/da/remote-privacy.html
 
 ### 지원 URL
 
@@ -1063,6 +1143,11 @@ APPLE WATCH
 • Ένα Mac στο ίδιο δίκτυο Wi-Fi που εκτελεί το StickyPresenter
 • Επιτρεπόμενη πρόσβαση στο τοπικό δίκτυο και στις δύο συσκευές
 
+Συνδρομές
+Το StickyPresenterRemote Pro είναι συνδρομή με αυτόματη ανανέωση. Η χρέωση γίνεται στον λογαριασμό Apple σας και η συνδρομή ανανεώνεται, εκτός αν την ακυρώσετε τουλάχιστον 24 ώρες πριν λήξει η περίοδος. Διαχειριστείτε ή ακυρώστε τη συνδρομή οποτεδήποτε από τις Ρυθμίσεις.
+Όροι χρήσης (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Πολιτική απορρήτου: https://m1zz.github.io/StickyPresenter/el/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/el/remote.html
@@ -1125,6 +1210,11 @@ VAATIMUKSET
 • iPhone, jossa on iOS 17 tai uudempi
 • Samassa Wi-Fi-verkossa oleva Mac, jossa StickyPresenter on käynnissä
 • Paikallisen verkon käyttö sallittu molemmissa laitteissa
+
+Tilaukset
+StickyPresenterRemote Pro on automaattisesti uusiutuva tilaus. Maksu veloitetaan Apple-tililtäsi, ja tilaus uusiutuu, ellei sitä peruta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peru tilaus milloin tahansa Asetuksissa.
+Käyttöehdot (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Tietosuojakäytäntö: https://m1zz.github.io/StickyPresenter/fi/remote-privacy.html
 
 ### 지원 URL
 
@@ -1189,6 +1279,11 @@ PERSYARATAN
 • Mac di jaringan Wi-Fi yang sama yang menjalankan StickyPresenter
 • Akses Jaringan Lokal diizinkan di kedua perangkat
 
+Langganan
+StickyPresenterRemote Pro adalah langganan yang diperpanjang otomatis. Pembayaran ditagihkan ke Akun Apple Anda dan langganan diperpanjang kecuali dibatalkan paling lambat 24 jam sebelum periode berakhir. Kelola atau batalkan kapan saja di Pengaturan.
+Ketentuan Penggunaan (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Kebijakan Privasi: https://m1zz.github.io/StickyPresenter/id/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/id/remote.html
@@ -1251,6 +1346,11 @@ KRAV
 • iPhone med iOS 17 eller nyere
 • En Mac i samme Wi-Fi-nettverk som kjører StickyPresenter
 • Tilgang til lokalt nettverk tillatt på begge enhetene
+
+Abonnementer
+StickyPresenterRemote Pro er et abonnement som fornyes automatisk. Betalingen belastes Apple-kontoen din, og abonnementet fornyes med mindre du sier det opp minst 24 timer før perioden er over. Administrer eller si opp når som helst i Innstillinger.
+Bruksvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Personvernerklæring: https://m1zz.github.io/StickyPresenter/nb/remote-privacy.html
 
 ### 지원 URL
 
@@ -1315,6 +1415,11 @@ VEREISTEN
 • Een Mac in hetzelfde wifinetwerk waarop StickyPresenter draait
 • Toegang tot lokaal netwerk toegestaan op beide apparaten
 
+Abonnementen
+StickyPresenterRemote Pro is een automatisch verlengend abonnement. De betaling loopt via je Apple Account en het abonnement wordt verlengd, tenzij je minstens 24 uur voor het einde van de periode opzegt. Beheer of zeg op wanneer je wilt in Instellingen.
+Gebruiksvoorwaarden (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacybeleid: https://m1zz.github.io/StickyPresenter/nl/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/nl/remote.html
@@ -1377,6 +1482,11 @@ WYMAGANIA
 • iPhone z systemem iOS 17 lub nowszym
 • Mac w tej samej sieci Wi-Fi z uruchomioną aplikacją StickyPresenter
 • Dostęp do sieci lokalnej dozwolony na obu urządzeniach
+
+Subskrypcje
+StickyPresenterRemote Pro to subskrypcja odnawiana automatycznie. Opłata jest pobierana z Twojego konta Apple, a subskrypcja odnawia się, jeśli nie anulujesz jej co najmniej 24 godziny przed końcem okresu. Zarządzaj subskrypcją lub anuluj ją w dowolnej chwili w Ustawieniach.
+Warunki korzystania (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Polityka prywatności: https://m1zz.github.io/StickyPresenter/pl/remote-privacy.html
 
 ### 지원 URL
 
@@ -1441,6 +1551,11 @@ KRAV
 • En Mac i samma wifi-nätverk som kör StickyPresenter
 • Åtkomst till lokalt nätverk tillåten på båda enheterna
 
+Prenumerationer
+StickyPresenterRemote Pro är en prenumeration som förnyas automatiskt. Betalningen dras från ditt Apple-konto och prenumerationen förnyas om du inte avslutar den minst 24 timmar innan perioden slutar. Hantera eller avsluta när som helst i Inställningar.
+Användarvillkor (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Integritetspolicy: https://m1zz.github.io/StickyPresenter/sv/remote-privacy.html
+
 ### 지원 URL
 
 https://m1zz.github.io/StickyPresenter/sv/remote.html
@@ -1503,6 +1618,11 @@ GEREKSİNİMLER
 • iOS 17 veya sonrası yüklü iPhone
 • Aynı Wi-Fi ağında StickyPresenter’ı çalıştıran bir Mac
 • Her iki cihazda da Yerel Ağ erişimine izin verilmiş olması
+
+Abonelikler
+StickyPresenterRemote Pro otomatik yenilenen bir aboneliktir. Ödeme Apple Hesabınızdan alınır ve dönem bitmeden en az 24 saat önce iptal edilmezse abonelik yenilenir. Ayarlar'dan istediğiniz zaman yönetebilir veya iptal edebilirsiniz.
+Kullanım Koşulları (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Gizlilik Politikası: https://m1zz.github.io/StickyPresenter/tr/remote-privacy.html
 
 ### 지원 URL
 
