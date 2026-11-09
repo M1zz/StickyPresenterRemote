@@ -122,6 +122,8 @@ struct RemoteRootView: View {
         .onAppear { offerGraduationIfDue(pro.graduationIsDue) }
         // 조건이 맞으면(몇 번 써 보고 타이머를 시작해 본 뒤) 한 번 "즐겁게 쓰고 계신가요?" 를 묻는다.
         .leeoSatisfactionCheck(RemoteSpec.self)
+        // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
+        .leeoFeedbackReplyNotice(RemoteSpec.self)
         // 단축어로 맡겨 둔 명령은 Mac 과 붙는 순간 보낸다.
         .onChange(of: client.isConnected) { _, _ in
             flushPendingCommands()
