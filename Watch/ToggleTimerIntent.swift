@@ -6,7 +6,8 @@ import AppIntents
 
 struct ToggleTimerIntent: AppIntent {
     static var title: LocalizedStringResource = "발표 타이머 시작·일시정지"
-    static var description = IntentDescription("iPhone 리모컨을 거쳐 Mac의 타이머를 시작하거나 일시정지합니다.")
+    // ⚠️ 설명에 iPhone 같은 기기 이름을 적으면 업로드가 막힌다(ITMS-90626, 1.1.1 빌드 10). Mac 은 통과했다.
+    static var description = IntentDescription("리모컨을 거쳐 Mac의 타이머를 시작하거나 일시정지합니다.")
 
     @MainActor
     func perform() async throws -> some IntentResult & ProvidesDialog {

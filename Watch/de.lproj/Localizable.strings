@@ -15,7 +15,7 @@
 "일시정지" = "Pause";
 "시작" = "Start";
 "발표 타이머 시작·일시정지" = "Präsentationstimer starten oder pausieren";
-"iPhone 리모컨을 거쳐 Mac의 타이머를 시작하거나 일시정지합니다." = "Startet oder pausiert den Timer auf dem Mac über die iPhone-Fernbedienung.";
+"리모컨을 거쳐 Mac의 타이머를 시작하거나 일시정지합니다." = "Startet oder pausiert den Timer auf dem Mac über die Fernbedienung.";
 "시작하거나 멈출 타이머가 없어요" = "Kein Timer zum Starten oder Pausieren";
 "iPhone에서 리모컨을 열어 주세요" = "Öffne die Fernbedienung auf dem iPhone";
 "일시정지했어요" = "Timer pausiert";
