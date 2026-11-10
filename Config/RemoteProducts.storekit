@@ -3,7 +3,7 @@
   "nonRenewingSubscriptions": [],
   "products": [
     {
-      "displayPrice": "17.99",
+      "displayPrice": "35.99",
       "familyShareable": true,
       "internalID": "CAD8F533-D976-4B92-9B5C-EF9AC56BC83F",
       "localizations": [
@@ -18,12 +18,12 @@
           "locale": "ko"
         }
       ],
-      "productID": "com.leeo.StickyPresenter.Remote.pro.lifetime",
+      "productID": "com.leeo.StickyPresenter.mac.pro.lifetime",
       "referenceName": "Remote Pro Lifetime",
       "type": "NonConsumable"
     },
     {
-      "displayPrice": "12.99",
+      "displayPrice": "23.99",
       "familyShareable": true,
       "internalID": "C827BA9F-D1C0-4427-9B97-AC49942C0F40",
       "localizations": [
@@ -38,7 +38,7 @@
           "locale": "ko"
         }
       ],
-      "productID": "com.leeo.StickyPresenter.Remote.pro.graduate",
+      "productID": "com.leeo.StickyPresenter.mac.pro.graduate",
       "referenceName": "Remote Pro Graduate",
       "type": "NonConsumable"
     },
@@ -58,7 +58,7 @@
           "locale": "ko"
         }
       ],
-      "productID": "com.leeo.StickyPresenter.Remote.tip.small",
+      "productID": "com.leeo.StickyPresenter.tip.small",
       "referenceName": "Tip Small",
       "type": "Consumable"
     },
@@ -78,7 +78,7 @@
           "locale": "ko"
         }
       ],
-      "productID": "com.leeo.StickyPresenter.Remote.tip.medium",
+      "productID": "com.leeo.StickyPresenter.tip.medium",
       "referenceName": "Tip Medium",
       "type": "Consumable"
     },
@@ -98,9 +98,29 @@
           "locale": "ko"
         }
       ],
-      "productID": "com.leeo.StickyPresenter.Remote.tip.large",
+      "productID": "com.leeo.StickyPresenter.tip.large",
       "referenceName": "Tip Large",
       "type": "Consumable"
+    },
+    {
+      "displayPrice": "11.99",
+      "familyShareable": true,
+      "internalID": "CAD8F533-D976-4B92-9B5C-EF9AC56BA001",
+      "localizations": [
+        {
+          "description": "Pay once, Pro forever",
+          "displayName": "Remote Controller Pro (Lifetime)",
+          "locale": "en_US"
+        },
+        {
+          "description": "한 번 내고 Pro를 평생",
+          "displayName": "리모컨 Pro (평생)",
+          "locale": "ko"
+        }
+      ],
+      "productID": "com.leeo.StickyPresenter.mac.pro.upgrade",
+      "referenceName": "Plus 평생 → Pro 평생",
+      "type": "NonConsumable"
     }
   ],
   "settings": {
@@ -117,7 +137,7 @@
         {
           "adHocOffers": [],
           "codeOffers": [],
-          "displayPrice": "5.99",
+          "displayPrice": "11.99",
           "familyShareable": false,
           "groupNumber": 1,
           "internalID": "A9065D81-E390-4EEE-8800-0A990AA774E7",
@@ -140,7 +160,7 @@
               "locale": "ko"
             }
           ],
-          "productID": "com.leeo.StickyPresenter.Remote.pro.yearly",
+          "productID": "com.leeo.StickyPresenter.mac.pro.yearly",
           "recurringSubscriptionPeriod": "P1Y",
           "referenceName": "Remote Pro Yearly",
           "subscriptionGroupID": "24E781F0-BBE7-4143-B13D-0C6913D3BB79",
@@ -150,7 +170,7 @@
         {
           "adHocOffers": [],
           "codeOffers": [],
-          "displayPrice": "1.99",
+          "displayPrice": "3.99",
           "familyShareable": false,
           "groupNumber": 1,
           "internalID": "EEE4D542-0E74-4BC8-8351-42323E93FBC1",
@@ -166,7 +186,7 @@
               "locale": "ko"
             }
           ],
-          "productID": "com.leeo.StickyPresenter.Remote.pro.monthly",
+          "productID": "com.leeo.StickyPresenter.mac.pro.monthly",
           "recurringSubscriptionPeriod": "P1M",
           "referenceName": "Remote Pro Monthly",
           "subscriptionGroupID": "24E781F0-BBE7-4143-B13D-0C6913D3BB79",
@@ -176,7 +196,7 @@
         {
           "adHocOffers": [],
           "codeOffers": [],
-          "displayPrice": "0.99",
+          "displayPrice": "1.49",
           "familyShareable": false,
           "groupNumber": 1,
           "internalID": "45BE0C02-3821-4BDE-9723-944FDBF5DF47",
@@ -192,7 +212,7 @@
               "locale": "ko"
             }
           ],
-          "productID": "com.leeo.StickyPresenter.Remote.pro.weekly",
+          "productID": "com.leeo.StickyPresenter.mac.pro.weekly",
           "recurringSubscriptionPeriod": "P1W",
           "referenceName": "Remote Pro Weekly",
           "subscriptionGroupID": "24E781F0-BBE7-4143-B13D-0C6913D3BB79",

@@ -59,12 +59,17 @@ struct RemotePaywallView: View {
                 .foregroundStyle(.tint)
                 .accessibilityHidden(true)
                 .padding(.top, 8)
-            Text(verbatim: "Remote Controller Pro")
+            Text(verbatim: "StickyPresenter Pro")
                 .font(.title.bold())
                 .multilineTextAlignment(.center)
                 .accessibilityAddTraits(.isHeader)
             Text("발표를 넘기는 조작은 언제나 무료예요. 타이머 창을 꾸미고 옮기고, 손목으로 남은 시간을 받고 싶을 때 Pro를 고르세요.")
                 .font(.body)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+            Text("Mac의 StickyPresenter와 같은 Pro예요. 한 번 열면 Mac에서도 열려요.")
+                .font(.footnote)
                 .foregroundStyle(.secondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
@@ -141,7 +146,7 @@ struct RemotePaywallView: View {
                               price: String(format: LeeoLadderText.perYearFormat, yearly.displayPrice),
                               note: introNote(yearly)))
         }
-        if let lifetime = pro.product(RemoteProducts.lifetime) {
+        if let lifetime = pro.product(pro.lifetimeProductID) {
             plans.append(Plan(product: lifetime, title: LeeoLadderText.lifetime, price: lifetime.displayPrice,
                               note: worthNote(yearly: yearly, lifetime: lifetime)))
         }

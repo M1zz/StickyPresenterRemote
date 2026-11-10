@@ -11,7 +11,7 @@
 set -e
 U=$1; shift
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-BUNDLE=com.leeo.StickyPresenter.Remote.watchkitapp
+BUNDLE=com.leeo.StickyPresenter.watchkitapp
 LOCALES=${*:-"ko en-US en-GB ja zh-Hans zh-Hant es de fr it pt-BR ru th vi cs da el fi id nb nl pl sv tr"}
 
 cap() {  # cap <로케일> <파일> <장면>

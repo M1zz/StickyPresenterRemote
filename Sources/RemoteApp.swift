@@ -11,7 +11,6 @@ struct StickyPresenterRemoteApp: App {
 
     init() {
         // 페이월 전부터 쓰던 기기인지 맨 먼저 적는다 — 아래 · RemoteClient 가 리모컨 기록을 새로 쓰기 전에.
-        RemoteLegacy.noteFirstLaunch()
         // 사용량 기록 · 크래시 진단 · 익명 사용 통계 · 원격 킬스위치. 실패해도 리모컨 동작에는 영향이 없다.
         LeeoKit.bootstrap(RemoteSpec.self, flags: RemoteFlag.self)
         #if DEBUG

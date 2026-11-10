@@ -4,6 +4,8 @@ import LeeoKit
 // MARK: - 앱 계약 (LeeoKit)
 // 피드백 · 리뷰 요청 · 익명 사용 통계 · 크래시 진단 · 원격 킬스위치가 이 계약 하나로 켜진다.
 // Mac 앱(StickyPresenterSpec)과 같은 FeedbackHub 컨테이너를 쓰고, appIdentifier 로 갈라 센다.
+// ⚠️ appIdentifier 는 번들 ID 가 아니라 허브의 이름표다. 번들 ID 는 Mac 앱과 같은 `com.leeo.StickyPresenter` 로
+//    옮겼지만(한 레코드 · 유니버설 구매) 리모컨의 피드백 · 통계 · 원격 스위치는 이 이름표로 계속 갈린다.
 
 enum RemoteSpec: LeeoAppSpec {
     /// 식별 이름 — 피드백·통계 기록이 이 값으로 묶인다. 화면에 보이는 이름은 CFBundleDisplayName.
@@ -15,6 +17,7 @@ enum RemoteSpec: LeeoAppSpec {
         privacyURL: URL(string: "https://m1zz.github.io/StickyPresenter/remote-privacy.html")!,
         supportURL: URL(string: "https://m1zz.github.io/StickyPresenter/remote.html")!)
     /// 무료 · Pro 두 칸. 발표를 넘기는 조작은 무료, 꾸미고 옮기고 손목으로 받는 것이 Pro (→ RemotePro.swift).
+    /// Pro 는 Mac 의 StickyPresenter Pro 와 같은 상품이다 — 한 번 사면 양쪽에서 열린다.
     /// 판정은 `RemotePro.allows` 가 한다 — 상품을 불러온 적 없는 기기는 잠그지 않는다.
     static let monetization = LeeoMonetization.freemiumSubscription(
         LeeoSubscriptionConfig(
@@ -25,9 +28,9 @@ enum RemoteSpec: LeeoAppSpec {
             // 개발자 응원하기(팁, 소모성 세 가지 — 작은 것부터). 기능을 열지 않는다.
             // ⚠️ productIDs 에 넣지 않는다 — 넣으면 팁을 낸 사람이 Pro 가 된다.
             tipJar: LeeoTipJarConfig(productIDs: [
-                "com.leeo.StickyPresenter.Remote.tip.small",
-                "com.leeo.StickyPresenter.Remote.tip.medium",
-                "com.leeo.StickyPresenter.Remote.tip.large"
+                "com.leeo.StickyPresenter.tip.small",
+                "com.leeo.StickyPresenter.tip.medium",
+                "com.leeo.StickyPresenter.tip.large"
             ])))
     /// 팁 엔진은 Pro 스토어가 함께 들고 있다(결제 리스너가 하나여야 팁이 두 번 끝나지 않는다).
     @MainActor static var tipJar: LeeoTipJar { RemotePro.shared.store.tipJar! }
@@ -46,8 +49,8 @@ enum RemoteSpec: LeeoAppSpec {
         .init(id: "watch", status: .shipped("1.1.0"),
               title: String(localized: "Apple Watch"),
               detail: String(localized: "발표 중 남은 시간을 손목 진동으로 알려 주고, 손목에서 시작·일시정지와 30초 조정을 해요.")),
-        // 같은 Apple 계정이면 Mac 본체에서 연 Pro 가 리모컨에도 열리게. 두 앱이 함께 바꿀 일이라 다음으로 미뤘다.
-        .init(id: "host-pro", status: .planned,
+        // Mac 앱과 한 레코드가 되면서 풀렸다 — 같은 상품이라 어느 쪽에서 열든 양쪽에서 열린다.
+        .init(id: "host-pro", status: .shipped("1.2.0"),
               title: String(localized: "Mac과 함께 열기"),
               detail: String(localized: "Mac의 StickyPresenter에서 연 Pro가 리모컨에도 그대로 열려요. 한 번만 고르면 돼요.")),
     ]}

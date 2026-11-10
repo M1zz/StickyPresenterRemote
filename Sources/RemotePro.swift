@@ -3,9 +3,13 @@ import Foundation
 import LeeoKit
 import StoreKit
 
-// MARK: - Remote Controller Pro
+// MARK: - Pro
 //
 // 칸은 둘이다: 무료 · Pro.
+//
+// **Pro 는 Mac 의 StickyPresenter Pro 와 같은 상품이다.** 이 앱은 Mac 앱과 번들 ID 가 같은
+// (`com.leeo.StickyPresenter`) 한 레코드의 iPhone · Watch 판이라, 어느 기기에서 사든 양쪽 영수증에 선다.
+// 그래서 상품 ID 는 `Plan.swift`(Mac 레포)의 Pro 상품과 글자 하나까지 같다. Plus 는 리모컨에서 여는 것이 없다.
 //
 // **발표를 넘기는 조작은 언제나 무료다.** 연결 · 시작 · 멈춤 · 30초 조정 · 초기화 · 새 타이머 ·
 // Siri · 단축어 · 감추기 · 정렬 · 지우기는 잠그지 않는다. 연단에서 타이머를 못 멈추게 하면
@@ -14,9 +18,6 @@ import StoreKit
 //
 // ⚠️ 스토어에서 Pro 상품을 **한 번도** 불러온 적이 없는 기기는 잠그지 않는다(`allows`).
 //    App Store Connect 에 상품을 만들기 전에 빌드가 나가도, 살 수 없는데 막히는 사람이 없게.
-//
-// ⚠️ 페이월 전부터 쓰던 사람은 Pro 평생이다(`RemoteLegacy`). 1.1.0 까지 Apple Watch · 위치 판 ·
-//    크기 조절은 무료였다. 이미 쓰던 것을 빼앗아 팔지 않는다.
 
 /// Pro 에서 열리는 것. 페이월 비교표와 잠금 안내가 이 목록 하나를 읽는다.
 enum RemoteProFeature: String, CaseIterable, Identifiable {
@@ -47,10 +48,9 @@ enum RemoteProFeature: String, CaseIterable, Identifiable {
 }
 
 enum RemoteProducts {
-    private static let prefix = "com.leeo.StickyPresenter.Remote.pro"
+    private static let prefix = "com.leeo.StickyPresenter.mac.pro"
 
-    // ⚠️ App Store Connect · Config/RemoteProducts.storekit 과 글자 하나까지 같아야 한다.
-    //    구독 셋은 한 구독 그룹("Remote Controller Pro")에 넣는다.
+    // ⚠️ App Store Connect · Config/RemoteProducts.storekit · Mac 레포의 `PlanEntitlement` 와 글자 하나까지 같아야 한다.
     static let yearly = "\(prefix).yearly"
     static let monthly = "\(prefix).monthly"
     static let weekly = "\(prefix).weekly"
@@ -58,10 +58,14 @@ enum RemoteProducts {
     static let lifetime = "\(prefix).lifetime"
     /// 구독 졸업: 구독 중인 사람만 보는 평생가 (비소모성, `LeeoGraduation`). 열면 평생과 같다.
     static let graduate = "\(prefix).graduate"
+    /// Plus 평생을 가진 사람만 보는 Pro 평생 올리기 (비소모성). 열면 평생과 같다.
+    static let upgrade = "\(prefix).upgrade"
+    /// Mac 에서 산 Plus 평생. 리모컨에서는 아무것도 열지 않고, 평생 단추를 올리기 값으로 바꿀 뿐이다.
+    static let plusLifetime = "com.leeo.StickyPresenter.mac.plus.lifetime"
 
     /// 페이월이 불러올 상품. 연 구독이 기본이다.
     /// ⚠️ 팁 상품은 넣지 않는다 — 넣으면 팁을 낸 사람이 Pro 가 된다.
-    static let all = [yearly, lifetime, monthly, weekly, graduate]
+    static let all = [yearly, lifetime, monthly, weekly, graduate, upgrade]
 
     /// 구독 졸업을 제안할 구독. 주 · 월 구독에 졸업가를 주면 한 주 값으로 평생이 싸지므로 연만.
     static let graduationSubscriptions: Set<String> = [yearly]
@@ -90,7 +94,7 @@ final class RemotePro: ObservableObject {
         guard let config = RemoteSpec.paywall else {
             preconditionFailure("RemoteSpec.monetization 에 페이월이 없다")
         }
-        store = LeeoStore(config: config, grandfather: { await RemoteLegacy.isLegacyInstall() })
+        store = LeeoStore(config: config)
         hasSeenProducts = UserDefaults.standard.bool(forKey: Self.seenKey)
         // 스토어의 변화(구매 · 환불 · 만료 · 상품 도착)를 이 객체를 보는 화면에 그대로 흘린다.
         observation = store.objectWillChange.sink { [weak self] _ in
@@ -113,11 +117,27 @@ final class RemotePro: ObservableObject {
 
     func product(_ id: String) -> Product? { store.products.first { $0.id == id } }
 
+    /// Mac 에서 Plus 평생을 샀는가. 그러면 평생 단추가 올리기 상품을 판다.
+    @Published private(set) var ownsPlusLifetime = false
+
+    /// 페이월의 평생 자리에 설 상품.
+    var lifetimeProductID: String { ownsPlusLifetime ? RemoteProducts.upgrade : RemoteProducts.lifetime }
+
+    private func readPlusLifetime() async {
+        var owns = false
+        for await entitlement in Transaction.currentEntitlements {
+            if case .verified(let transaction) = entitlement, transaction.revocationDate == nil,
+               transaction.productID == RemoteProducts.plusLifetime { owns = true }
+        }
+        ownsPlusLifetime = owns
+    }
+
     /// 앱이 켜지고 앞으로 나올 때마다 영수증을 다시 읽는다.
     func refresh() async {
         await store.refreshEntitlements()
         await store.loadProducts()
         noteProducts()
+        await readPlusLifetime()
         subscription = await LeeoGraduation.currentSubscription(among: RemoteProducts.graduationSubscriptions)
     }
 
@@ -137,45 +157,5 @@ final class RemotePro: ObservableObject {
         guard !hasSeenProducts, !store.products.isEmpty else { return }
         hasSeenProducts = true
         UserDefaults.standard.set(true, forKey: Self.seenKey)
-    }
-}
-
-// MARK: - 먼저 써 준 사람
-
-/// 페이월이 생기기 전에 이 앱을 쓰던 사람인가. 맞으면 Pro 평생이다(`LeeoStore` 의 grandfather).
-enum RemoteLegacy {
-    /// 페이월 없는 마지막 출시 빌드: 1.1.0 빌드 9.
-    /// 근거: 태그 deploy-StickyPresenterRemote-1.1.0-9 (커밋 fca42c7 "1.1.0 빌드 9 — DeployBar 배포분") 다음 커밋
-    /// 3a7ba80 에서 페이월이 들어왔다. 그 전 출시 빌드는 1.0 빌드 2 · 1.0.7 빌드 3 · 1.0.8 빌드 1 · 1.0.9~1.0.12 빌드 4~8 로
-    /// 모두 9 이하다. iOS 의 `originalAppVersion` 은 처음 받은 빌드의 CFBundleVersion(빌드 번호) 문자열이다.
-    /// ⚠️ 그래서 이제부터 빌드 번호는 9 이하로 되돌리면 안 된다 (Config/Version.xcconfig).
-    static let lastFreeBuild = 9
-
-    private static let checkedKey = "remote.legacy.checked"
-    private static let deviceKey = "remote.legacy.device"
-
-    /// 페이월이 생긴 빌드를 **처음 켤 때 한 번만**, 리모컨이 무엇이든 기기에 적기 전에 부른다.
-    /// 그때 이미 리모컨 기록(리모컨 ID · 짝 맺은 Mac · 첫 안내를 본 표시)이 있었으면 쓰던 사람이다.
-    /// 오프라인이라 영수증(`AppTransaction`)을 못 읽어도 쓰던 사람이 잠기지 않게 하는 두 번째 끈이다.
-    /// 리모컨 ID 는 1.0.8 부터 첫 실행마다 생겼으므로 그 뒤로 켜 본 기기는 모두 여기서 걸린다.
-    static func noteFirstLaunch() {
-        let defaults = UserDefaults.standard
-        guard !defaults.bool(forKey: checkedKey) else { return }
-        defaults.set(true, forKey: checkedKey)
-        let hadRecords = ["remote.remoteID", "remote.pairedHostID", "hasSeenOnboarding"]
-            .contains { defaults.object(forKey: $0) != nil }
-        if hadRecords { defaults.set(true, forKey: deviceKey) }
-    }
-
-    /// ① 이 기기에 페이월 전부터 리모컨 기록이 있었다 (`noteFirstLaunch`).
-    /// ② 이 Apple 계정이 `lastFreeBuild` 이하 빌드로 앱을 처음 받았다 — 새 기기에서도 이어진다.
-    /// ⚠️ 샌드박스 · TestFlight 의 `originalAppVersion` 은 늘 "1.0" 이라 출시 환경에서만 ②를 본다.
-    @MainActor
-    static func isLegacyInstall() async -> Bool {
-        if UserDefaults.standard.bool(forKey: deviceKey) { return true }
-        guard case .verified(let app)? = try? await AppTransaction.shared,
-              app.environment == .production,
-              let build = Int(app.originalAppVersion) else { return false }
-        return build <= lastFreeBuild
     }
 }

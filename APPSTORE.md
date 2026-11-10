@@ -4,15 +4,19 @@ DeployBar 가 배포할 때 이 파일을 읽어 리모컨 앱(StickyPresenterRe
 Mac 앱 문구는 레포 최상단 `APPSTORE.md` 에 따로 있다.
 기능은 `docs/remote.html` 과 `Sources/` 에 있는 것만 쓴다 — 리모컨은 타이머만 다룬다(슬라이드 넘기기는 없다).
 
+<!-- ⚠️ 이 앱은 Mac 'StickyPresenter' 와 같은 App Store 레코드의 iPhone · Watch 판이다 (번들 ID com.leeo.StickyPresenter).
+     이름 · 부제 · 개인정보 처리방침 URL 은 레코드 하나에 하나뿐이라 Mac 레포의 APPSTORE.md 와 글자 하나까지 같게 둔다.
+     여기서 다르게 적으면 배포가 Mac 쪽 이름까지 바꾼다. iPhone 에서만 다른 것은 설명 · 키워드 · 프로모션 텍스트 · 지원 URL · 스크린샷이다. -->
+
 ## 한국어 (ko)
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Mac 발표 타이머를 손안에서
+발표 화면 위 메모와 타이머
 
 ### 키워드
 
@@ -66,7 +70,7 @@ https://m1zz.github.io/StickyPresenter/ko/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/ko/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/ko/privacy.html
 
 ### 마케팅 URL
 
@@ -76,11 +80,11 @@ https://m1zz.github.io/StickyPresenter/ko/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Run your Mac talk timer
+Notes & timers for your talk
 
 ### 키워드
 
@@ -134,7 +138,7 @@ https://m1zz.github.io/StickyPresenter/en/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/en/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/en/privacy.html
 
 ### 마케팅 URL
 
@@ -144,11 +148,11 @@ https://m1zz.github.io/StickyPresenter/en/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Control your Mac talk timer
+Notes & timers for presenting
 
 ### 키워드
 
@@ -202,7 +206,7 @@ https://m1zz.github.io/StickyPresenter/en/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/en/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/en/privacy.html
 
 ### 마케팅 URL
 
@@ -212,11 +216,11 @@ https://m1zz.github.io/StickyPresenter/en/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Macの発表タイマーを手元で操作
+発表中の原稿とタイマーを前面に
 
 ### 키워드
 
@@ -270,7 +274,7 @@ https://m1zz.github.io/StickyPresenter/ja/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/ja/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/ja/privacy.html
 
 ### 마케팅 URL
 
@@ -280,11 +284,11 @@ https://m1zz.github.io/StickyPresenter/ja/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-在 iPhone 上掌控 Mac 演讲计时
+演讲便签、倒计时与提词器
 
 ### 키워드
 
@@ -338,7 +342,7 @@ https://m1zz.github.io/StickyPresenter/zh-Hans/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/zh-Hans/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/zh-Hans/privacy.html
 
 ### 마케팅 URL
 
@@ -348,11 +352,11 @@ https://m1zz.github.io/StickyPresenter/zh-Hans/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Controla el reloj de tu charla
+Guion y cronómetro en pantalla
 
 ### 키워드
 
@@ -406,7 +410,7 @@ https://m1zz.github.io/StickyPresenter/es/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/es/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/es/privacy.html
 
 ### 마케팅 URL
 
@@ -416,11 +420,11 @@ https://m1zz.github.io/StickyPresenter/es/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Mac-Vortragstimer in der Hand
+Notizen & Timer für Vorträge
 
 ### 키워드
 
@@ -474,7 +478,7 @@ https://m1zz.github.io/StickyPresenter/de/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/de/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/de/privacy.html
 
 ### 마케팅 URL
 
@@ -484,11 +488,11 @@ https://m1zz.github.io/StickyPresenter/de/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Votre minuteur Mac en main
+Notes, minuteur et prompteur
 
 ### 키워드
 
@@ -542,7 +546,7 @@ https://m1zz.github.io/StickyPresenter/fr/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/fr/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/fr/privacy.html
 
 ### 마케팅 URL
 
@@ -552,11 +556,11 @@ https://m1zz.github.io/StickyPresenter/fr/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Il timer del tuo Mac in mano
+Note, timer e gobbo
 
 ### 키워드
 
@@ -610,7 +614,7 @@ https://m1zz.github.io/StickyPresenter/it/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/it/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/it/privacy.html
 
 ### 마케팅 URL
 
@@ -620,11 +624,11 @@ https://m1zz.github.io/StickyPresenter/it/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-O timer do seu Mac na mão
+Notas, timer e teleprompter
 
 ### 키워드
 
@@ -678,7 +682,7 @@ https://m1zz.github.io/StickyPresenter/pt-BR/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/pt-BR/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/pt-BR/privacy.html
 
 ### 마케팅 URL
 
@@ -688,11 +692,11 @@ https://m1zz.github.io/StickyPresenter/pt-BR/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Таймер Mac всегда под рукой
+Заметки и таймер для доклада
 
 ### 키워드
 
@@ -746,7 +750,7 @@ https://m1zz.github.io/StickyPresenter/ru/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/ru/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/ru/privacy.html
 
 ### 마케팅 URL
 
@@ -756,11 +760,11 @@ https://m1zz.github.io/StickyPresenter/ru/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-用 iPhone 掌控 Mac 簡報計時
+簡報便利貼與計時器
 
 ### 키워드
 
@@ -814,7 +818,7 @@ https://m1zz.github.io/StickyPresenter/zh-Hant/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/zh-Hant/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/zh-Hant/privacy.html
 
 ### 마케팅 URL
 
@@ -824,11 +828,11 @@ https://m1zz.github.io/StickyPresenter/zh-Hant/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-คุมเวลาพรีเซนต์บน Mac
+โน้ต จับเวลา เทเลพรอมป์เตอร์
 
 ### 키워드
 
@@ -882,7 +886,7 @@ https://m1zz.github.io/StickyPresenter/th/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/th/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/th/privacy.html
 
 ### 마케팅 URL
 
@@ -892,11 +896,11 @@ https://m1zz.github.io/StickyPresenter/th/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Hẹn giờ thuyết trình trên Mac
+Ghi chú, hẹn giờ thuyết trình
 
 ### 키워드
 
@@ -950,7 +954,7 @@ https://m1zz.github.io/StickyPresenter/vi/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/vi/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/vi/privacy.html
 
 ### 마케팅 URL
 
@@ -960,11 +964,11 @@ https://m1zz.github.io/StickyPresenter/vi/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Ovládejte časovač na Macu
+Poznámky a časovač k řeči
 
 ### 키워드
 
@@ -1018,7 +1022,7 @@ https://m1zz.github.io/StickyPresenter/cs/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/cs/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/cs/privacy.html
 
 ### 마케팅 URL
 
@@ -1028,11 +1032,11 @@ https://m1zz.github.io/StickyPresenter/cs/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Styr din Macs foredragstimer
+Sedler og timer til oplægget
 
 ### 키워드
 
@@ -1086,7 +1090,7 @@ https://m1zz.github.io/StickyPresenter/da/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/da/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/da/privacy.html
 
 ### 마케팅 URL
 
@@ -1096,11 +1100,11 @@ https://m1zz.github.io/StickyPresenter/da/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Το χρονόμετρο του Mac στο χέρι
+Σημειώσεις για την ομιλία
 
 ### 키워드
 
@@ -1154,7 +1158,7 @@ https://m1zz.github.io/StickyPresenter/el/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/el/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/el/privacy.html
 
 ### 마케팅 URL
 
@@ -1164,11 +1168,11 @@ https://m1zz.github.io/StickyPresenter/el/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Macin puheajastin kädessäsi
+Laput ja ajastin esitykseen
 
 ### 키워드
 
@@ -1222,7 +1226,7 @@ https://m1zz.github.io/StickyPresenter/fi/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/fi/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/fi/privacy.html
 
 ### 마케팅 URL
 
@@ -1232,11 +1236,11 @@ https://m1zz.github.io/StickyPresenter/fi/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Atur timer presentasi di Mac
+Catatan & timer presentasi
 
 ### 키워드
 
@@ -1290,7 +1294,7 @@ https://m1zz.github.io/StickyPresenter/id/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/id/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/id/privacy.html
 
 ### 마케팅 URL
 
@@ -1300,11 +1304,11 @@ https://m1zz.github.io/StickyPresenter/id/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Styr foredragstimeren på Macen
+Notater og tidtaker til talen
 
 ### 키워드
 
@@ -1358,7 +1362,7 @@ https://m1zz.github.io/StickyPresenter/nb/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/nb/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/nb/privacy.html
 
 ### 마케팅 URL
 
@@ -1368,11 +1372,11 @@ https://m1zz.github.io/StickyPresenter/nb/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Je Mac-spreektimer in de hand
+Notities en timer voor je talk
 
 ### 키워드
 
@@ -1426,7 +1430,7 @@ https://m1zz.github.io/StickyPresenter/nl/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/nl/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/nl/privacy.html
 
 ### 마케팅 URL
 
@@ -1436,11 +1440,11 @@ https://m1zz.github.io/StickyPresenter/nl/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Minutnik z Maca w Twojej dłoni
+Notatki i minutnik na scenę
 
 ### 키워드
 
@@ -1494,7 +1498,7 @@ https://m1zz.github.io/StickyPresenter/pl/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/pl/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/pl/privacy.html
 
 ### 마케팅 URL
 
@@ -1504,11 +1508,11 @@ https://m1zz.github.io/StickyPresenter/pl/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Styr talartimern på din Mac
+Lappar och timer för talet
 
 ### 키워드
 
@@ -1562,7 +1566,7 @@ https://m1zz.github.io/StickyPresenter/sv/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/sv/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/sv/privacy.html
 
 ### 마케팅 URL
 
@@ -1572,11 +1576,11 @@ https://m1zz.github.io/StickyPresenter/sv/remote.html
 
 ### 이름
 
-StickyPresenterRemote
+StickyPresenter
 
 ### 부제
 
-Mac sunum zamanlayıcısı elinde
+Konuşma için not ve süre
 
 ### 키워드
 
@@ -1630,7 +1634,7 @@ https://m1zz.github.io/StickyPresenter/tr/remote.html
 
 ### 개인정보처리방침 URL
 
-https://m1zz.github.io/StickyPresenter/tr/remote-privacy.html
+https://m1zz.github.io/StickyPresenter/tr/privacy.html
 
 ### 마케팅 URL
 
